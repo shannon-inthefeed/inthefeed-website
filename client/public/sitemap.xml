@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://inthefeed.com/</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://inthefeed.com/logo.png</image:loc>
+      <image:title>In the Feed Logo</image:title>
+      <image:caption>In the Feed - Content Marketing for Tech & SaaS</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Us Page -->
+  <url>
+    <loc>https://inthefeed.com/about</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://inthefeed.com/shannon-kuykendall.jpg</image:loc>
+      <image:title>Shannon Kuykendall - Founder</image:title>
+      <image:caption>Shannon Kuykendall, Founder and Content Strategist at In the Feed</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Pricing Page -->
+  <url>
+    <loc>https://inthefeed.com/pricing</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+</urlset>

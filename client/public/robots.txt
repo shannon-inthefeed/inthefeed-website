@@ -1,0 +1,13 @@
+# robots.txt for In the Feed
+# https://inthefeed.com/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://inthefeed.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

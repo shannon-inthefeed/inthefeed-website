@@ -1,0 +1,60 @@
+WHATSAPP BUSINESS INTEGRATION
+Add WhatsApp CTA Within Pricing Cards
+PLACEMENT: Add a secondary CTA button below the main CTA on each pricing tier card.
+CURRENT CTA STRUCTURE:
+[Primary Button: "Let's Talk" or "Start Growing Now"]
+NEW STRUCTURE:
+[Primary Button: "Book Discovery Call"] (links to Cal.com)
+[Secondary Button/Link: "💬 Chat on WhatsApp"] (links to WhatsApp with pre-filled message)
+Pre-filled WhatsApp messages by tier:
+•	Starter Plan:
+https://wa.me/18052030564?text=Hi%20Shannon%2C%20I'm%20interested%20in%20the%20Starter%20Plan%20(€1%2C500%2Fmonth).%20Can%20you%20tell%20me%20if%20it's%20a%20good%20fit%20for%20my%20business%3F
+•	Growth Plan:
+https://wa.me/18052030564?text=Hi%20Shannon%2C%20I'm%20interested%20in%20the%20Growth%20Plan%20(€1%2C750%2Fmonth).%20Can%20we%20discuss%20how%20this%20would%20work%20for%20my%20team%3F
+•	Scale Plan:
+https://wa.me/18052030564?text=Hi%20Shannon%2C%20I'm%20interested%20in%20the%20Scale%20Plan%20(€2%2C500%2Fmonth).%20I'd%20love%20to%20learn%20more%20about%20the%20video%20content%20and%20full%20setup.
+DEVELOPER INSTRUCTIONS:
+•	Make WhatsApp button/link smaller and styled as secondary (outline button or text link)
+•	Add WhatsApp icon (SVG or emoji: 💬)
+•	Ensure it's clearly distinct from primary CTA but still visible
+ 
+5. COPY IMPROVEMENTS ON PRICING PAGE
+A. Update Main Headline
+CURRENT:
+Simple, Transparent Pricing
+Choose the plan that fits your growth stage. Scale up or down anytime.
+NEW (More Value-Focused):
+Simple, Transparent Pricing—Built for Growth
+Get enterprise-quality content without the enterprise budget. Choose your plan, cancel anytime.
+DEVELOPER INSTRUCTIONS: Replace headline copy in hero section of pricing page.
+ 
+B. Add Trust Badge Row Below Pricing Tiers
+PLACEMENT: Directly below the three pricing tier cards, before testimonials section.
+NEW ELEMENT:
+[CENTERED ICON ROW WITH TEXT]
+✅ 100% Satisfaction Guaranteed  |  ⚡ Setup in 48 Hours |  🚫 No Long-Term Contracts  |  🎯 Results in 30 Days
+DEVELOPER INSTRUCTIONS:
+•	Use icon + text format
+•	Light background or border to separate from pricing cards
+•	Mobile: stack icons vertically or 2x2 grid
+ 
+C. Strengthen CTA Copy on Pricing Cards
+CURRENT CTAs:
+•	"Let's Talk"
+•	"Start Growing Now"
+•	"Scale Now"
+RECOMMENDED CHANGES:
+Current	New (More Action-Oriented)
+"Let's Talk"	"Book Your Strategy Call"
+"Start Growing Now"	"Get Started with Growth"
+"Scale Now"	"Scale Your Content Now"
+DEVELOPER INSTRUCTIONS: Update button text on each pricing card. This is to reflect my location change. I am no longer looking for clients in the US. My focus is on the UK/EU. 
+ 
+6. ADD QUICK FAQ ADDRESSING ROI & IN-HOUSE TEAM OBJECTIONS
+PLACEMENT: Expand the existing FAQ section to include these two additional questions at the top.
+NEW FAQ ITEMS TO ADD:
+Q: How quickly will I see ROI from In the Feed?
+A: Most clients see measurable engagement lifts (LinkedIn followers, website traffic, inbound inquiries) within 30 days. Our clients report 3x–5x ROI compared to hiring an in-house content manager, thanks to our AI-assisted efficiency and zero management overhead.
+Q: I already have an in-house marketing team. Can In the Feed still help?
+A: Absolutely! In the Feed works best as a content production partner that frees your team to focus on strategy, campaigns, and growth initiatives. We handle the heavy lifting, content calendars, writing, design, and scheduling so your team can do what they do best without burnout.
+DEVELOPER INSTRUCTIONS: Add these two questions at the top of the existing FAQ accordion.
