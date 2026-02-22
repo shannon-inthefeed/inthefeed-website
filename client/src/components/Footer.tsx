@@ -122,18 +122,7 @@ export default function Footer() {
           <div className="border-t border-background/20 pt-8">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm opacity-60">
               <div className="flex flex-col sm:flex-row items-center gap-3">
-                <p>&copy; 2025 In the Feed. All rights reserved.</p>
-                <a
-                  href="https://appsquatch.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 hover-elevate transition-opacity hover:opacity-100"
-                  data-testid="link-powered-by-appsquatch"
-                  aria-label="Website built by AppSquatch"
-                >
-                  <Zap className="h-3.5 w-3.5" />
-                  <span>Powered by AppSquatch</span>
-                </a>
+                <p>&copy; 2026 In the Feed. All rights reserved.</p>
               </div>
               <Link 
                 href="/privacy" 
