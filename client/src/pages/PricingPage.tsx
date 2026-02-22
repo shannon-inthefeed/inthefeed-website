@@ -90,12 +90,14 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
       description: "90-Day Launch Phase: One Channel. We build your Authority Architecture on your personal LinkedIn or Company Page.",
       features: [
         "90-Day Initial Commitment (Billed Upfront)",
-        "4 long-form posts a month (thought-leadership, carousels, infographics)",
-        "16-20 short posts to keep your feed lively",
-        "4 SEO-optimized blog posts",
-        "Branded images and creatives for every post",
+        "4 long-form posts a month (Authority-building & Carousels)",
+        "16-20 short posts to maintain high-frequency feed presence",
+        "4 SEO-optimized blog posts for your website",
+        "Branded images and custom creatives for every post",
+        "Monthly Performance Report: Lead signal & engagement audit", // New Feature
+        "Monthly Strategic Direction: Pivot & planning session", // New Feature
         "DIY Power: Access to Metricool's self-service platform",
-        "Dedicated content strategist (Shannon)",
+        "Dedicated Content Strategist: Shannon T. Kuykendall",
         "Premium support from a real human"
       ],
       addOns: commonAddOns,
