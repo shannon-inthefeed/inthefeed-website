@@ -33,6 +33,7 @@ interface Plan {
   monthlyPrice: number;
   eurPrice: number;
   gbpPrice: number;
+  launchPrice: number;
   description: string;
   features: string[];
   popular?: boolean;
