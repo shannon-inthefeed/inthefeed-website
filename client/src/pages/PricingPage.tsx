@@ -86,8 +86,7 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
       name: "Starter Plan",
       monthlyPrice: 1500,
       eurPrice: 1500,
-      gbpPrice: 1500,
-      launchPrice: 4500, // Added: 3-month upfront total
+      launchPrice: 4500,
       description: "90-Day Launch Phase: One Channel. We build your Authority Architecture on your personal LinkedIn or Company Page.",
       features: [
         "90-Day Initial Commitment (Billed Upfront), then €1,500/mo",
@@ -95,21 +94,20 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
         "16-20 short posts to maintain high-frequency feed presence",
         "4 SEO-optimized blog posts for your website",
         "Branded images and custom creatives for every post",
-        "Monthly Performance Report: Lead signal & engagement audit", // New Feature
-        "Monthly Strategic Direction: Pivot & planning session", // New Feature
+        "Monthly Performance Report: Lead signal & engagement audit",
+        "Monthly Strategic Direction: Pivot & planning session",
         "DIY Power: Access to Metricool's self-service platform",
         "Dedicated Content Strategist: Shannon T. Kuykendall",
         "Premium support from a real human"
       ],
       addOns: commonAddOns,
       cta: "Book Your Strategy Call",
-      whatsappLink: "https://wa.me/18052030564?text=Hi%20Shannon%2C%20I'm%20interested%20in%20the%20Starter%20Plan%20(%E2%82%AC1%2C500%2Fmonth).%20Can%20you%20tell%20me%20if%20it's%20a%20good%20fit%20for%20my%20business%3F"
+      whatsappLink: "https://wa.me/18052030564?text=Hi%20Shannon%2C%20I'm%20interested%20in%20the%20Starter%20Plan%20(€1,500/month)."
     },
     {
       name: "Growth Plan",
       monthlyPrice: 1750,
       eurPrice: 1750,
-      gbpPrice: 1750,
       description: "One Channel, choose either your personal LinkedIn profile or your company page as your primary channel.",
       popular: true,
       features: [
@@ -122,13 +120,12 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
       ],
       addOns: commonAddOns,
       cta: "Get Started with Growth",
-      whatsappLink: "https://wa.me/18052030564?text=Hi%20Shannon%2C%20I'm%20interested%20in%20the%20Growth%20Plan%20(%E2%82%AC1%2C750%2Fmonth).%20Can%20we%20discuss%20how%20this%20would%20work%20for%20my%20team%3F"
+      whatsappLink: "https://wa.me/18052030564?text=Hi%20Shannon%2C%20I'm%20interested%20in%20the%20Growth%20Plan%20(€1,750/month)."
     },
     {
       name: "Scale Plan",
       monthlyPrice: 2500,
       eurPrice: 2500,
-      gbpPrice: 2500,
       description: "One Channel, choose either your personal LinkedIn profile or your company page as your primary channel.",
       features: [
         "Everything from Starter & Growth Plans",
@@ -140,10 +137,10 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
       ],
       addOns: commonAddOns.slice(1),
       cta: "Scale Your Content Now",
-      whatsappLink: "https://wa.me/18052030564?text=Hi%20Shannon%2C%20I'm%20interested%20in%20the%20Scale%20Plan%20(%E2%82%AC2%2C500%2Fmonth).%20I'd%20love%20to%20learn%20more%20about%20the%20video%20content%20and%20full%20setup."
+      whatsappLink: "https://wa.me/18052030564?text=Hi%20Shannon%2C%20I'm%20interested%20in%20the%20Scale%20Plan%20(€2,500/month)."
     }
   ];
-
+  
   const faqs = [
     {
       question: "How quickly will I see ROI from In the Feed?",
