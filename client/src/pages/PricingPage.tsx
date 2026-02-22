@@ -80,20 +80,22 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
     }
   ];
 
-  const plans: Plan[] = [
+ const plans: Plan[] = [
     {
       name: "Starter Plan",
       monthlyPrice: 1500,
       eurPrice: 1500,
       gbpPrice: 1500,
-      description: "One Channel, choose either your personal LinkedIn profile or your company page as your primary channel.",
+      launchPrice: 4500, // Added: 3-month upfront total
+      description: "90-Day Launch Phase: One Channel. We build your Authority Architecture on your personal LinkedIn or Company Page.",
       features: [
+        "90-Day Initial Commitment (Billed Upfront)",
         "4 long-form posts a month (thought-leadership, carousels, infographics)",
         "16-20 short posts to keep your feed lively",
         "4 SEO-optimized blog posts",
         "Branded images and creatives for every post",
         "DIY Power: Access to Metricool's self-service platform",
-        "Dedicated content strategist (that's me!)",
+        "Dedicated content strategist (Shannon)",
         "Premium support from a real human"
       ],
       addOns: commonAddOns,
