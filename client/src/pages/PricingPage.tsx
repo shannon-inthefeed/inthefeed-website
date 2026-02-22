@@ -84,13 +84,10 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
  const plans: Plan[] = [
     {
       name: "Starter Plan",
-      monthlyPrice: 1500,
-      eurPrice: 1500,
-      gbpPrice: 1500,
       launchPrice: 4500, // Added: 3-month upfront total
       description: "90-Day Launch Phase: One Channel. We build your Authority Architecture on your personal LinkedIn or Company Page.",
       features: [
-        "90-Day Initial Commitment (Billed Upfront)",
+        "90-Day Initial Commitment (Billed Upfront), then €1,500/mo",
         "4 long-form posts a month (Authority-building & Carousels)",
         "16-20 short posts to maintain high-frequency feed presence",
         "4 SEO-optimized blog posts for your website",
