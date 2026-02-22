@@ -436,9 +436,9 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
                                   </p>
                                 </div>
                               </div>
-                              <p className="text-xs text-primary font-medium mt-2">
-                                +€{addOn.eurPrice} / £{addOn.gbpPrice} / ${addOn.usdPrice} {addOn.priceLabel}
-                              </p>
+                             <p className="text-xs text-primary font-medium mt-2">
+  +€{addOn.eurPrice.toLocaleString()} {addOn.priceLabel}
+</p>
                             </div>
                           );
                         })}
