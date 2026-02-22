@@ -365,25 +365,42 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
                     </div>
                   )}
                   
-                  <CardHeader className="text-center pb-8 pt-8">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">
-                      {plan.name}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mb-6">
-                      {plan.description}
-                    </p>
-                    <div className="mb-2 space-y-1">
-                      <div className="text-2xl font-bold text-foreground">
-                        €{plan.eurPrice.toLocaleString()} / £{plan.gbpPrice.toLocaleString()} / ${price.toLocaleString()}
-                      </div>
-                      <div className="text-sm text-muted-foreground">
-                        per month
-                      </div>
-                    </div>
-                    <p className="text-xs text-muted-foreground">
-                      No contract. Cancel Anytime.
-                    </p>
-                  </CardHeader>
+                 <CardHeader className="text-center pb-8 pt-8">
+  <h3 className="text-2xl font-bold text-foreground mb-2">
+    {plan.name}
+  </h3>
+  <p className="text-sm text-muted-foreground mb-6">
+    {plan.description}
+  </p>
+  <div className="mb-2 space-y-1">
+    {/* This is the magic logic for the Launch Price */}
+    {plan.launchPrice ? (
+      <>
+        <div className="text-2xl font-bold text-foreground">
+          €{plan.launchPrice.toLocaleString()} / £{plan.launchPrice.toLocaleString()} / ${plan.launchPrice.toLocaleString()}
+        </div>
+        <div className="text-sm font-semibold text-primary">
+          90-Day Launch Phase (Billed Upfront)
+        </div>
+        <div className="text-xs text-muted-foreground italic">
+          (Equates to €{plan.eurPrice.toLocaleString()}/mo)
+        </div>
+      </>
+    ) : (
+      <>
+        <div className="text-2xl font-bold text-foreground">
+          €{plan.eurPrice.toLocaleString()} / £{plan.gbpPrice.toLocaleString()} / ${price.toLocaleString()}
+        </div>
+        <div className="text-sm text-muted-foreground">
+          per month
+        </div>
+      </>
+    )}
+  </div>
+  <p className="text-xs text-muted-foreground">
+    No contract. Cancel Anytime.
+  </p>
+</CardHeader>
                   
                   <CardContent className="space-y-6">
                     <div className="space-y-3 mb-4">
