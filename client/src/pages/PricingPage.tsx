@@ -108,9 +108,11 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
       name: "Growth Plan",
       monthlyPrice: 1750,
       eurPrice: 1750,
-      description: "One Channel, choose either your personal LinkedIn profile or your company page as your primary channel.",
+      launchPrice: 5250, // Added: 3-month upfront total (1750 * 3)
+      description: "90-Day Launch Phase: Four Channels.",
       popular: true,
       features: [
+        "90-Day Initial Commitment (Billed Upfront), then €1,750/mo",
         "Everything from Starter Plan",
         "Up to 4 channels managed for you",
         "60+ posts a month (yes, really)",
@@ -122,12 +124,14 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
       cta: "Get Started with Growth",
       whatsappLink: "https://wa.me/18052030564?text=Hi%20Shannon%2C%20I'm%20interested%20in%20the%20Growth%20Plan%20(€1,750/month)."
     },
-    {
+   {
       name: "Scale Plan",
       monthlyPrice: 2500,
       eurPrice: 2500,
-      description: "One Channel, choose either your personal LinkedIn profile or your company page as your primary channel.",
+      launchPrice: 7500, // Added: 3-month upfront total (2500 * 3)
+      description: "90-Day Launch Phase: Full-scale content domination including video and cross-platform distribution.",
       features: [
+        "90-Day Initial Commitment (Billed Upfront), then €2,500/mo",
         "Everything from Starter & Growth Plans",
         "80+ posts a month across all your channels",
         "AI Video content (with or without you on camera)",
