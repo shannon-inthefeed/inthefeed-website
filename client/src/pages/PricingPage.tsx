@@ -398,7 +398,7 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
     )}
   </div>
   <p className="text-xs text-muted-foreground">
-    No contract. Cancel Anytime.
+    No contract. Cancel Anytime After First 90 Days.
   </p>
 </CardHeader>
                   
