@@ -91,13 +91,13 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
       features: [
         "90-Day Initial Commitment (Billed Upfront), then €1,500/mo",
         "4 long-form posts a month (Authority-building & Carousels)",
-        "16-20 short posts to maintain high-frequency feed presence",
-        "4 SEO-optimized blog posts for your website",
-        "Branded images and custom creatives for every post",
+        "16-20 short posts a month to maintain high-frequency feed presence",
+        "4 SEO-optimized blog posts a month for your website",
+        "Branded images and custom creatives (infographics & carousels) for every piece of content.",
         "Monthly Performance Report: Lead signal & engagement audit",
         "Monthly Strategic Direction: Pivot & planning session",
-        "DIY Power: Access to Metricool's self-service platform",
-        "Dedicated Content Strategist: Shannon T. Kuykendall",
+        "KPI Dashboard: Access to Metricool's platform",
+        "Dedicated Content Strategist: Shannon Kuykendall",
         "Premium support from a real human"
       ],
       addOns: commonAddOns,
