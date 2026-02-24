@@ -159,8 +159,8 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
       answer: "Each plan covers ONE main LinkedIn profile, either your personal profile OR your company page. You choose which one is your primary focus, and we build your entire content strategy around it."
     },
     {
-      question: "Can I add more team members or a company page?",
-      answer: "Yes! You can add as many team member profiles or company pages as you need at the add-on rate (+€500 each person/per month). This is perfect for amplifying your reach through senior leaders, key voices, or coordinated company messaging."
+      question: "Can I add more team members or a company/personal page?",
+      answer: "Yes! You can add as many team member profiles or company/personal page as you need at the add-on rate. This is perfect for amplifying your reach through senior leaders, key voices, or coordinated company/leadership messaging."
     },
     {
       question: "Can I switch plans later?",
@@ -168,7 +168,7 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept all major credit cards (Visa, Mastercard, American Express & Discover) and ACH bank transfers accepted for annual plans paid in advance."
+      answer: "We accept Visa and Mastercard and IBAN bank transfers (perferred). We use Wise for our payment processing."
     },
     {
       question: "Is there a setup fee?",
