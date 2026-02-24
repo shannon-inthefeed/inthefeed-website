@@ -65,14 +65,14 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
       icon: Users,
       title: "Add Team Members",
       description: "Add senior leaders or key voices to the content calendar. Each team member gets strategy, copy, and content posted under their own profile.",
-      eurPrice: 250,
-      gbpPrice: 250,
-      usdPrice: 250,
+      eurPrice: 500,
+      gbpPrice: 500,
+      usdPrice: 500,
       priceLabel: "/profile/month"
     },
     {
       icon: Building2,
-      title: "Company Page Management",
+      title: "Company/Personal LinkedIn Page Management",
       description: "For clients whose primary is personal profile. Company page gets 4-8 aligned posts/month, announcements, and optimization.",
       eurPrice: 250,
       gbpPrice: 250,
@@ -160,7 +160,7 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
     },
     {
       question: "Can I add more team members or a company page?",
-      answer: "Yes! You can add as many team member profiles or company pages as you need at the add-on rate (+€250 / £250 / $250 each per month). This is perfect for amplifying your reach through senior leaders, key voices, or coordinated company messaging."
+      answer: "Yes! You can add as many team member profiles or company pages as you need at the add-on rate (+€500 each person/per month). This is perfect for amplifying your reach through senior leaders, key voices, or coordinated company messaging."
     },
     {
       question: "Can I switch plans later?",
