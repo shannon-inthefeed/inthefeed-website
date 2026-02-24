@@ -74,9 +74,9 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
       icon: Building2,
       title: "Company/Personal LinkedIn Page Management",
       description: "For clients whose primary is personal profile. Company page gets 4-8 aligned posts/month, announcements, and optimization.",
-      eurPrice: 250,
-      gbpPrice: 250,
-      usdPrice: 250,
+      eurPrice: 500,
+      gbpPrice: 500,
+      usdPrice: 500,
       priceLabel: "/month"
     }
   ];
