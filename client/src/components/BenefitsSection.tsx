@@ -4,34 +4,40 @@ export default function BenefitsSection() {
   const benefits = [
     {
       icon: Zap,
-      title: "AI-Powered Efficiency",
-      description: "Leverage cutting-edge AI to create content 10x faster without sacrificing quality"
+      title: "Human + AI Production",
+      description:
+        "Built by humans, assisted by AI. Your voice stays intact at scale. No generic output dressed as strategy.",
     },
     {
       icon: Target,
-      title: "Laser-Focused Strategy",
-      description: "Custom content plans tailored to your tech or SaaS niche and target audience"
+      title: "ICP-Specific Content",
+      description:
+        "Content written for your exact buyer. Not the broadest possible audience. Your pipeline, not your follower count.",
     },
     {
       icon: TrendingUp,
-      title: "Proven Growth Results",
-      description: "Drive measurable engagement and conversions with data-backed content"
+      title: "Pipeline-Tied Reporting",
+      description:
+        "We report on inbound conversations and deals where content played a role. Not impressions. Not likes.",
     },
     {
       icon: Clock,
-      title: "Time Back to Scale",
-      description: "Stop managing content production and focus on building your product or service"
+      title: "Founder-Optional Operation",
+      description:
+        "One 90-minute extraction session in week one. Then a monthly approval pass of 30 to 60 minutes. Everything else runs without you.",
     },
     {
       icon: Users,
-      title: "Elite Specialists",
-      description: "Work with expert content creators who understand tech and SaaS marketing"
+      title: "20 Years of Pattern Recognition",
+      description:
+        "Shannon has watched every content trend cycle through. She knows which ones compound and which ones disappear.",
     },
     {
       icon: Shield,
-      title: "Consistent Quality",
-      description: "Never worry about inconsistent output or missed deadlines again"
-    }
+      title: "No Contract. No Lock-in.",
+      description:
+        "Cancel after the first 90 days, anytime. You keep everything we build: the strategy, the calendar, the content, the voice guide.",
+    },
   ];
 
   return (
@@ -39,19 +45,19 @@ export default function BenefitsSection() {
       <div className="container px-6 max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Why Tech & SaaS Founders Choose In the Feed
+            Why B2B SaaS Founders With Proven Products Choose In the Feed
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to dominate your market with content that converts
+            Built for founders past the startup scramble. Ready for inbound.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="text-center"
                 data-testid={`benefit-${index}`}
               >
