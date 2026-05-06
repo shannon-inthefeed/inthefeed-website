@@ -8,37 +8,45 @@ import {
 export default function FAQ() {
   const faqs = [
     {
-      question: "What if it doesn't work for me?",
-      answer: "We're committed to your success. If you're not satisfied with our service, we work with you to make it right. You can cancel anytime with no long-term contracts or penalties."
+      question: "What is The Founder Exit™?",
+      answer:
+        "The Founder Exit™ is our core framework: Position, Extract, Build, Distribute, Exit. We define your positioning, extract your thinking in one 90-minute session, build and publish your content, and remove you from the production loop entirely. The engine runs. Inbound compounds. You focus on closing, not creating.",
     },
     {
-      question: "How long do I get access?",
-      answer: "Your subscription is month-to-month with no long-term contracts. You maintain access as long as your subscription is active, and you can cancel anytime without penalties."
-    },
-    {
-      question: "Is this for beginners or established companies?",
-      answer: "In the Feed works for both! We tailor our strategies to your current stage. Whether you're just launching or scaling to 8 figures, our AI + specialist approach adapts to your needs."
-    },
-    {
-      question: "Do I need a marketing team to get started?",
-      answer: "Not at all! That's the whole point. We become your marketing team. You just need to have a clear understanding of your product and target audience, we handle everything else."
-    },
-    {
-      question: "Can I cancel anytime?",
-      answer: "Yes! There are no long-term contracts. You can cancel your subscription at any time, and you'll have access through the end of your current billing period."
-    },
-    {
-      question: "How do I access support?",
-      answer: "All plans provide email support from our team, ensuring human assistance is always available."
-    },
-    {
-      question: "What makes you different from other content agencies?",
-      answer: "We uniquely combine AI technology with human expertise. This means you get the speed and data insights of AI with the creativity and strategic thinking that only experienced content specialists can provide, at a fraction of the cost of traditional agencies."
+      question: "Is this for founders just starting out or established companies?",
+      answer:
+        "In the Feed is built for B2B tech and SaaS founders with proven products and existing clients who are past the survival phase. If you're pre-revenue or still finding product-market fit, we're likely not the right fit yet. This works when there's something worth amplifying.",
     },
     {
       question: "How quickly will I see results?",
-      answer: "Most clients see measurable improvements in engagement within the first 30 days. Significant revenue impact typically shows up in months 2-3 as your content compounds and your audience grows."
-    }
+      answer:
+        "Pipeline signals, inbound DMs, and buyers citing your content typically start appearing at months 2 to 3. Full compounding, where your calendar fills regularly with qualified inbound, comes at months 4 to 6. Anyone promising a transformed pipeline in 30 days is selling you something else.",
+    },
+    {
+      question: "How much of my time does this take?",
+      answer:
+        "After the initial extraction session in week one (90 minutes), your involvement is a monthly approval pass of 30 to 60 minutes. That's it. Everything else runs without you. If you're currently spending more than that on content and getting no pipeline, that's the gap we're closing.",
+    },
+    {
+      question: "What if the content doesn't sound like me?",
+      answer:
+        "We build from your real conversations, calls, Looms, voice notes, and emails, not guesswork. The first month includes voice calibration. If it doesn't sound like you, we rewrite it. No charge, no argument. This only works if it sounds like you. That's not a nice-to-have. It's the whole point.",
+    },
+    {
+      question: "What's the contract?",
+      answer:
+        "Every plan starts with a 90-day launch block, billed upfront. After that, it's month-to-month. Cancel anytime with no penalties. Everything we build stays yours: the strategy, the calendar, the content, the voice guide. No lock-in. No black box.",
+    },
+    {
+      question: "What makes you different from other content agencies?",
+      answer:
+        "Most agencies optimise for output. We optimise for pipeline. Clients have performance dashboards, a shared collaboration workspace, and content approval before anything goes live. Nothing is a black box. Every piece of content is tied to a strategy. Every strategy is tied to pipeline, not impressions.",
+    },
+    {
+      question: "What's the guarantee?",
+      answer:
+        "Execution guarantee: if we don't deliver strategy, content, and publishing in a given month, you don't pay for that month. No argument. And when you leave, everything we built goes with you.",
+    },
   ];
 
   return (
@@ -49,15 +57,15 @@ export default function FAQ() {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to know about In the Feed
+            The questions that move founders off the fence.
           </p>
         </div>
-        
+
         <div>
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
+              <AccordionItem
+                key={index}
                 value={`item-${index}`}
                 className="bg-background rounded-lg px-6 border"
                 data-testid={`faq-${index}`}
