@@ -8,39 +8,39 @@ export default function WhatsIncluded() {
       category: "Content Production",
       items: [
         "20 to 80+ posts per month depending on your plan",
-        "4+ long-form posts (thought-leadership, carousels, infographics)",
-        "4 SEO-optimized blog posts every month",
+        "4+ long-form posts per month: thought-leadership, carousels, infographics",
+        "4 SEO-optimised blog posts every month",
         "Branded images and creatives for every post",
-        "AI video content available (up to 3 videos/week on Scale Plan)"
-      ]
+        "AI video content available on the Scale Plan (up to 3 videos per week)",
+      ],
     },
     {
-      category: "Strategy & Support",
+      category: "Strategy and Support",
       items: [
-        "Dedicated content strategist",
-        "Premium support from a real human",
-        "Consistent, high-quality messaging across platforms",
-        "DIY Power: Access to Metricool's self-service platform"
-      ]
+        "Dedicated content strategist: Shannon Kuykendall",
+        "A real human to talk to",
+        "Consistent, on-brand messaging across every channel",
+        "Access to Metricool's self-service analytics platform",
+      ],
     },
     {
-      category: "Growth & Scale Options",
+      category: "Plans",
       items: [
-        "Starter Plan: 1 channel with 20 posts/month",
-        "Growth Plan: Up to 4 channels with 60+ posts/month",
-        "Scale Plan: All channels + AI video (80+ posts/month)",
-        "Add video content: 4 videos/month for $500 extra"
-      ]
+        "Starter: 1 channel, 20 posts per month — from €1,500/mo",
+        "Growth: up to 4 channels, 60+ posts per month — from €1,750/mo",
+        "Scale: all channels plus AI video, 80+ posts per month — from €2,500/mo",
+        "Video content add-on: €500/mo",
+      ],
     },
     {
       category: "Flexibility",
       items: [
-        "No long-term contracts required",
-        "Cancel anytime with no penalties",
-        "Upgrade or downgrade between plans",
-        "Setup starts in 24 hours"
-      ]
-    }
+        "90-day launch block, then month-to-month. No long-term contract.",
+        "Cancel anytime after day 90 with no penalties",
+        "Everything we build stays yours on exit",
+        "Operational in 48 hours",
+      ],
+    },
   ];
 
   return (
@@ -48,16 +48,16 @@ export default function WhatsIncluded() {
       <div className="container px-6 max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Everything You Need to Dominate Your Market
+            Everything That Comes With the Engine
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            One comprehensive package with no hidden fees or surprise charges
+            One complete system. No hidden costs. No surprises.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           {included.map((section, sectionIndex) => (
-            <div 
+            <div
               key={sectionIndex}
               data-testid={`included-section-${sectionIndex}`}
               className="text-center md:text-left"
@@ -67,8 +67,8 @@ export default function WhatsIncluded() {
               </h3>
               <div className="space-y-4 flex flex-col items-center md:items-start">
                 {section.items.map((item, itemIndex) => (
-                  <div 
-                    key={itemIndex} 
+                  <div
+                    key={itemIndex}
                     className="flex gap-3 items-start"
                     data-testid={`included-item-${sectionIndex}-${itemIndex}`}
                   >
@@ -80,16 +80,16 @@ export default function WhatsIncluded() {
             </div>
           ))}
         </div>
-        
+
         <div className="text-center mt-12">
-          <Button 
+          <Button
             size="lg"
             className="bg-primary text-primary-foreground border-primary-border"
             asChild
             data-testid="button-browse-plans"
           >
             <Link href="/pricing">
-              Browse All Plans
+              See Full Pricing
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
