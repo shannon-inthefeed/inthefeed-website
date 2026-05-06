@@ -1,6 +1,5 @@
 import HeroSection from "@/components/HeroSection";
 import ExpandedPromise from "@/components/ExpandedPromise";
-import VSLSection from "@/components/VSLSection";
 import SocialProof from "@/components/SocialProof";
 import ResultsSection from "@/components/ResultsSection";
 import ProblemStatement from "@/components/ProblemStatement";
@@ -20,47 +19,42 @@ import { useLocation } from "wouter";
 
 export default function LandingPage() {
   const [location] = useLocation();
-  
+
   useEffect(() => {
     const hash = window.location.hash;
-    
+
     const scrollToElement = () => {
       if (hash) {
         const element = document.getElementById(hash.substring(1));
         if (element) {
           requestAnimationFrame(() => {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: "smooth" });
           });
           return true;
         }
       }
       return false;
     };
-    
+
     if (!scrollToElement()) {
       window.scrollTo(0, 0);
     }
   }, [location]);
 
   const handleCtaClick = () => {
-    console.log('CTA clicked - would open contact form or redirect to signup');
-  };
-
-  const handleVideoClick = () => {
-    console.log('Video clicked - would play VSL');
+    console.log("CTA clicked");
   };
 
   return (
     <div className="min-h-screen">
-      <SEO 
-        title="In the Feed - Content That Delivers for Tech & SaaS Teams That Move Fast"
-        description="Your business deserves content that drives results. In the Feed is the only service offering seamless integration of cutting-edge AI and elite content specialists, delivering tailored marketing plans for companies ready to dominate their field."
+      <SEO
+        title="In the Feed - The Founder Exit™ | Done-For-You Content Engine for B2B SaaS Founders"
+        description="We build and run your content engine. You approve once a month. Inbound sales conversations start finding you. Built for B2B tech and SaaS founders with proven products and existing clients."
         canonical="https://inthefeed.com/"
-        keywords="content marketing, Tech and SaaS content, AI content creation, social media management, content strategy, digital marketing, LinkedIn marketing, content automation, tech marketing, SaaS content marketing"
+        keywords="B2B SaaS content engine, founder content strategy, LinkedIn inbound pipeline, done-for-you content marketing, SaaS founder marketing, The Founder Exit, content agency for SaaS"
       />
-      <HeroSection onCtaClick={handleCtaClick} onVideoClick={handleVideoClick} />
+      <HeroSection onCtaClick={handleCtaClick} />
       <ExpandedPromise />
-      <VSLSection onPlay={handleVideoClick} />
       <SocialProof />
       <ResultsSection />
       <ProblemStatement />
