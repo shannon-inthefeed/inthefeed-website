@@ -1,5 +1,5 @@
 import { AlertCircle } from "lucide-react";
-import consultationPhoto from "@assets/content-challenges-consultation.png";
+import shannonSpeaking from "@assets/shannon-speaking.png";
 
 export default function ProblemStatement() {
   const painPoints = [
@@ -37,8 +37,8 @@ export default function ProblemStatement() {
 
           <div className="hidden lg:block">
             <img
-              src={consultationPhoto}
-              alt="B2B SaaS founder content strategy consultation"
+              src={shannonSpeaking}
+              alt="Shannon Kuykendall speaking at a marketing conference"
               className="rounded-xl shadow-lg w-full"
               loading="lazy"
               width="1200"
