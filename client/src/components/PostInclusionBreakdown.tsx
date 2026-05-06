@@ -2,19 +2,19 @@ import { X, Check } from "lucide-react";
 
 export default function PostInclusionBreakdown() {
   const without = [
-    "Inconsistent content quality and posting schedule",
-    "Burning time managing multiple freelancers",
-    "Wasting budget on strategies that don't convert",
-    "Falling behind competitors in organic reach",
-    "Struggling to measure ROI on content efforts"
+    "Pipeline that depends on who you know, not what buyers find",
+    "Content that stops the moment you stop",
+    "No clear line between content spend and revenue",
+    "Every fix still requires you in the loop",
+    "Visibility without architecture",
   ];
 
   const withService = [
-    "Predictable, high-quality content every single week",
-    "Expert team handling everything from strategy to execution",
-    "Data-driven approach with proven conversion tactics",
-    "Outpacing competitors with consistent market presence",
-    "Clear analytics showing exactly how content drives revenue"
+    "Inbound sales conversations that arrive without outbound effort",
+    "An engine that produces consistently, with or without you",
+    "Monthly reporting tied to pipeline signals and closed deals",
+    "One 90-minute session per quarter. Everything else runs.",
+    "Authority that compounds, not resets",
   ];
 
   return (
@@ -22,13 +22,13 @@ export default function PostInclusionBreakdown() {
       <div className="container px-6 max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Before & After In the Feed
+            Before and After The Founder Exit™
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            The transformation is real. Here's what changes when you partner with us.
+            This is what changes when the system runs without you.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center justify-center md:justify-start gap-2">
@@ -38,8 +38,8 @@ export default function PostInclusionBreakdown() {
               Without In the Feed
             </h3>
             {without.map((item, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="flex gap-3 items-start p-4 rounded-lg bg-destructive/5"
                 data-testid={`without-item-${index}`}
               >
@@ -48,7 +48,7 @@ export default function PostInclusionBreakdown() {
               </div>
             ))}
           </div>
-          
+
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center justify-center md:justify-start gap-2">
               <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
@@ -57,8 +57,8 @@ export default function PostInclusionBreakdown() {
               With In the Feed
             </h3>
             {withService.map((item, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="flex gap-3 items-start p-4 rounded-lg bg-primary/5"
                 data-testid={`with-item-${index}`}
               >
