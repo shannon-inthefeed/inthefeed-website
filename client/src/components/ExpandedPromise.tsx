@@ -2,10 +2,10 @@ import { Check } from "lucide-react";
 
 export default function ExpandedPromise() {
   const promises = [
-    "Seamless integration of cutting-edge AI and elite content specialists",
-    "Tailored content marketing plans designed for fast-scaling tech and SaaS companies",
-    "Consistent, high-quality social and blog content without in-house resources",
-    "Proven strategies to dominate your field and accelerate growth"
+    "A system built on your real thinking, not generic templates or guesswork",
+    "Voice-accurate content that sounds like you, not like it was outsourced",
+    "Distribution across every channel your buyers actually use",
+    "Monthly reporting tied to pipeline signals and inbound conversations, not follower counts",
   ];
 
   return (
@@ -13,17 +13,17 @@ export default function ExpandedPromise() {
       <div className="container px-6 max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            The Only Content Partner Built for Tech & SaaS Scale
+            Not a Ghostwriter. Not an Agency. A Content Engine.
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            In the Feed combines the precision of AI with the creativity of world-class content specialists to deliver marketing that actually moves the needle.
+            In the Feed builds the system most founders are missing. Strategy, production, distribution, and reporting tied directly to pipeline. Not impressions.
           </p>
         </div>
-        
+
         <div className="grid gap-6 md:grid-cols-2 mt-12">
           {promises.map((promise, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="flex gap-4 items-start"
               data-testid={`promise-item-${index}`}
             >
@@ -32,9 +32,7 @@ export default function ExpandedPromise() {
                   <Check className="h-5 w-5 text-primary" />
                 </div>
               </div>
-              <p className="text-base text-foreground leading-relaxed">
-                {promise}
-              </p>
+              <p className="text-base text-foreground leading-relaxed">{promise}</p>
             </div>
           ))}
         </div>
