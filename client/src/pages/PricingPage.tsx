@@ -82,7 +82,7 @@ export default function PricingPage({ onSelectPlan }: PricingPageProps) {
       title: "Team Member Profiles",
       description:
         "Add senior leaders or key voices to the content calendar. Each profile gets its own strategy, copy, and posting.",
-      eurPrice: 250,
+      eurPrice: 500,
       priceLabel: "/profile/month",
     },
     {
