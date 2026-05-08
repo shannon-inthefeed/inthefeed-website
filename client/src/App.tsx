@@ -11,6 +11,8 @@ import PricingPage from "@/pages/PricingPage";
 import PrivacyPage from "@/pages/PrivacyPage";
 import ContactPage from "@/pages/ContactPage";
 import CaseStudyDK from "@/pages/CaseStudyDK";
+import CaseStudyGalit from "@/pages/CaseStudyGalit";
+import CaseStudyNetRanks from "@/pages/CaseStudyNetRanks";
 import NotFound from "@/pages/not-found";
 import { useEffect } from "react";
 import { initGA } from "./lib/analytics";
@@ -18,7 +20,7 @@ import { useAnalytics } from "./hooks/use-analytics";
 
 function Router() {
   useAnalytics();
-  
+
   return (
     <Switch>
       <Route path="/" component={LandingPage} />
@@ -29,23 +31,24 @@ function Router() {
       <Route path="/privacy" component={PrivacyPage} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/case-studies/dk-consulting" component={CaseStudyDK} />
+      <Route path="/case-studies/miss-galit" component={CaseStudyGalit} />
+      <Route path="/case-studies/netranks-ai" component={CaseStudyNetRanks} />
       <Route component={NotFound} />
     </Switch>
   );
 }
 
-
 function App() {
   useEffect(() => {
     if (!import.meta.env.VITE_GA_MEASUREMENT_ID) {
-      console.warn('Missing required Google Analytics key: VITE_GA_MEASUREMENT_ID');
+      console.warn("Missing required Google Analytics key: VITE_GA_MEASUREMENT_ID");
     } else {
       initGA();
     }
   }, []);
 
   const handleCtaClick = () => {
-    console.log('CTA clicked - would open contact form');
+    console.log("CTA clicked - would open contact form");
   };
 
   return (
