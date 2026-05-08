@@ -24,20 +24,20 @@ export default function SocialProof() {
 
   const pipelineTestimonials = [
     {
-      name: "Miss Galit",
-      role: "DTC Fashion Founder",
+      name: "Galit Wexler",
+      role: "Founder, Miss Galit LLC",
       rating: 5,
-      text: "Shifting from posts that perform to a channel that reliably sparks real opportunities.",
+      text: "I knew Shannon for two years before I signed. My profile had 18,600 followers and I hadn't posted in months. I knew I needed help, I just had to get there. Signing with In the Feed was the right call. My content gets done, it performs better than I ever expected, and I don't have to think about it. That last part alone is worth it.",
       stats: [
         { value: "14", label: "inbound sales conversations" },
         { value: "+45%", label: "revenue increase" },
       ],
     },
     {
-      name: "NetRanks AI",
-      role: "B2B SaaS, AI Visibility and GEO Monitoring",
+      name: "Reya Sonmez",
+      role: "Founder, NetRanks AI",
       rating: 5,
-      text: "We built a LinkedIn system that generated 35 demos and closed 75% of them in under 45 days, from a standing start.",
+      text: "Shannon and In the Feed built us a LinkedIn pipeline from zero. 35 demos. 75% close rate. 45 days. The content system worked, and the numbers prove it.",
       stats: [
         { value: "35", label: "demos generated" },
         { value: "75%", label: "close rate" },
@@ -164,10 +164,14 @@ export default function SocialProof() {
                   width="96"
                   height="96"
                 />
-                <div>
+                <div className="flex-1">
                   <div className="font-semibold text-foreground text-sm">{pipelineTestimonials[0].name}</div>
                   <div className="text-xs text-muted-foreground">{pipelineTestimonials[0].role}</div>
                 </div>
+                <Link href="/case-studies/miss-galit" className="text-xs text-primary hover:underline flex items-center gap-1 flex-shrink-0">
+                  <ExternalLink className="h-3 w-3" />
+                  Case Study
+                </Link>
               </div>
             </CardContent>
           </Card>
@@ -203,10 +207,14 @@ export default function SocialProof() {
                   width="96"
                   height="96"
                 />
-                <div>
+                <div className="flex-1">
                   <div className="font-semibold text-foreground text-sm">{pipelineTestimonials[1].name}</div>
                   <div className="text-xs text-muted-foreground">{pipelineTestimonials[1].role}</div>
                 </div>
+                <Link href="/case-studies/netranks-ai" className="text-xs text-primary hover:underline flex items-center gap-1 flex-shrink-0">
+                  <ExternalLink className="h-3 w-3" />
+                  Case Study
+                </Link>
               </div>
             </CardContent>
           </Card>
