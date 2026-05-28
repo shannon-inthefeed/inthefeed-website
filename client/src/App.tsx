@@ -13,6 +13,10 @@ import ContactPage from "@/pages/ContactPage";
 import CaseStudyDK from "@/pages/CaseStudyDK";
 import CaseStudyGalit from "@/pages/CaseStudyGalit";
 import CaseStudyNetRanks from "@/pages/CaseStudyNetRanks";
+import BlogIndex from "@/pages/BlogIndex";
+import BlogPost1 from "@/pages/blog/BestLinkedInAgenciesSaas";
+import BlogPost2 from "@/pages/blog/LinkedInStrategyPostRevenue";
+import BlogPost3 from "@/pages/blog/LinkedInGhostwriterCost";
 import NotFound from "@/pages/not-found";
 import { useEffect } from "react";
 import { initGA } from "./lib/analytics";
@@ -33,6 +37,10 @@ function Router() {
       <Route path="/case-studies/dk-consulting" component={CaseStudyDK} />
       <Route path="/case-studies/miss-galit" component={CaseStudyGalit} />
       <Route path="/case-studies/netranks-ai" component={CaseStudyNetRanks} />
+      <Route path="/blog" component={BlogIndex} />
+      <Route path="/blog/best-linkedin-content-agencies-saas-founders-2026" component={BlogPost1} />
+      <Route path="/blog/linkedin-content-strategy-post-revenue-saas-founders" component={BlogPost2} />
+      <Route path="/blog/linkedin-ghostwriter-cost-2026" component={BlogPost3} />
       <Route component={NotFound} />
     </Switch>
   );
