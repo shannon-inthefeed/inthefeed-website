@@ -36,6 +36,46 @@ export const blogPosts = [
     dateISO: "2026-05-28",
     readTime: "6 min read",
   },
+  {
+    slug: "linkedin-content-compounding-curve",
+    title: "The LinkedIn Content Compounding Curve: What Months 1, 3, and 6 Actually Look Like",
+    excerpt:
+      "Most founders quit LinkedIn content at month two. Not because the strategy failed — because nobody told them what month two is supposed to feel like. Here is what the compounding curve looks like, month by month, and how to tell the difference between a strategy that isn't working and one that hasn't finished working yet.",
+    category: "Strategy",
+    date: "April 15, 2026",
+    dateISO: "2026-04-15",
+    readTime: "8 min read",
+  },
+  {
+    slug: "linkedin-engagement-strategy-b2b-founders",
+    title: "The Missing Half of Your LinkedIn Strategy: Turning LinkedIn Activity into Inbound Leads",
+    excerpt:
+      "You've posted 40 times this quarter. Your pipeline hasn't moved. That's not bad luck — that's a missing system. Posting without engaging is winking in the dark. Here is the five-step engagement framework that turns LinkedIn activity into inbound leads.",
+    category: "Strategy",
+    date: "March 31, 2026",
+    dateISO: "2026-03-31",
+    readTime: "6 min read",
+  },
+  {
+    slug: "linkedin-content-ai-generated-voice",
+    title: "\"Your Content Sounds AI-Generated.\" How to Tell if It's a Real Problem or a Panic Signal.",
+    excerpt:
+      "A client forwarded a note that her content sounded AI-generated. Her inbound was up. Her pipeline was moving. The right people were reaching out. Here is how to tell the difference between a real voice problem and a confidence panic — and what to do about each.",
+    category: "Content",
+    date: "March 11, 2026",
+    dateISO: "2026-03-11",
+    readTime: "5 min read",
+  },
+  {
+    slug: "b2b-founder-content-strategy-authority-2026",
+    title: "The 2026 Founder's Reality Check: Why Your Hustle is Building a House of Cards",
+    excerpt:
+      "The old playbook — chasing reach, spamming inboxes, and hoping for conversions — is officially dead. In 2026, the founders compounding fastest are building authority architecture, not hustle loops. Here is what that shift actually looks like.",
+    category: "Strategy",
+    date: "February 25, 2026",
+    dateISO: "2026-02-25",
+    readTime: "6 min read",
+  },
 ];
 
 export default function BlogIndex() {
