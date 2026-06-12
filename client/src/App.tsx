@@ -17,6 +17,10 @@ import BlogIndex from "@/pages/BlogIndex";
 import BlogPost1 from "@/pages/blog/BestLinkedInAgenciesSaas";
 import BlogPost2 from "@/pages/blog/LinkedInStrategyPostRevenue";
 import BlogPost3 from "@/pages/blog/LinkedInGhostwriterCost";
+import BlogPost4 from "@/pages/blog/ContentCompoundingCurve";
+import BlogPost5 from "@/pages/blog/LinkedInEngagementStrategy";
+import BlogPost6 from "@/pages/blog/ContentSoundsAIGenerated";
+import BlogPost7 from "@/pages/blog/FounderContentStrategy2026";
 import NotFound from "@/pages/not-found";
 import { useEffect } from "react";
 import { initGA } from "./lib/analytics";
@@ -24,7 +28,6 @@ import { useAnalytics } from "./hooks/use-analytics";
 
 function Router() {
   useAnalytics();
-
   return (
     <Switch>
       <Route path="/" component={LandingPage} />
@@ -41,6 +44,10 @@ function Router() {
       <Route path="/blog/best-linkedin-content-agencies-saas-founders-2026" component={BlogPost1} />
       <Route path="/blog/linkedin-content-strategy-post-revenue-saas-founders" component={BlogPost2} />
       <Route path="/blog/linkedin-ghostwriter-cost-2026" component={BlogPost3} />
+      <Route path="/blog/linkedin-content-compounding-curve" component={BlogPost4} />
+      <Route path="/blog/linkedin-engagement-strategy-b2b-founders" component={BlogPost5} />
+      <Route path="/blog/linkedin-content-ai-generated-voice" component={BlogPost6} />
+      <Route path="/blog/b2b-founder-content-strategy-authority-2026" component={BlogPost7} />
       <Route component={NotFound} />
     </Switch>
   );
