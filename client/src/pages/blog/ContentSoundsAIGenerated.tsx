@@ -97,7 +97,7 @@ export default function ContentSoundsAIGenerated() {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="\"Your Content Sounds AI-Generated.\" How to Tell if It's Real or a Panic Signal | In the Feed"
+        title={'"Your Content Sounds AI-Generated." How to Tell if It\'s a Real Problem or a Panic Signal | In the Feed'}
         description="A client forwarded a note that her content sounded AI-generated. Her pipeline KPIs said otherwise. Here is how to tell the difference between a real voice problem and a confidence panic — and what to do about each."
         canonical="https://inthefeed.com/blog/linkedin-content-ai-generated-voice"
         keywords="LinkedIn content sounds AI-generated, AI-generated content voice, LinkedIn content authenticity, founder voice B2B content, done-for-you content voice"
