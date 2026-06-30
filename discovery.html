@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Discovery Call | In the Feed</title>
+<meta name="description" content="Book a 30-minute discovery call with Shannon Kuykendall, Founder of In the Feed. No pitch. Just a straight conversation about your content and pipeline.">
+<meta property="og:title" content="Book a Discovery Call | In the Feed">
+<meta property="og:description" content="30 minutes. No pitch. We'll look at your content, find the pipeline gap, and be straight with you about what it takes to close it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://inthefeed.com/discovery">
+<meta property="og:image" content="https://inthefeed.com/uploads/og-image.png">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://inthefeed.com/discovery">
+<link rel="icon" type="image/png" href="uploads/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google Tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXVF1LTN5X"></script>
+<script>
+  try {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){window.dataLayer.push(arguments);};
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-ZXVF1LTN5X');
+  } catch(e) {}
+</script>
+<!-- Metricool -->
+<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"da226905df7cf5700307c70c827b4842"})});</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: 'DM Sans', sans-serif; background: #fff; color: #111; -webkit-font-smoothing: antialiased; height: 100%; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(35,43,83,0.08);
+    height: 72px;
+    display: flex; align-items: center;
+  }
+  .nav-inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 48px;
+    width: 100%; display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo img { height: 30px; width: auto; display: block; }
+  .nav-back {
+    font-size: 14px; font-weight: 500; color: #666; text-decoration: none;
+    display: flex; align-items: center; gap: 6px;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: #13544e; }
+  .nav-cta {
+    background: #232b53; color: #fff; padding: 10px 22px;
+    font-size: 14px; font-weight: 600; text-decoration: none;
+    border-radius: 4px; transition: background 0.2s;
+  }
+  .nav-cta:hover { background: #13544e; }
+
+  /* LAYOUT */
+  .page {
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    min-height: calc(100vh - 72px);
+  }
+
+  /* LEFT PANEL */
+  .left {
+    background: linear-gradient(160deg, #232b53 0%, #13544e 100%);
+    padding: 64px 48px;
+    position: sticky;
+    top: 72px;
+    height: calc(100vh - 72px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .left-accent { width: 40px; height: 3px; background: #5e9993; margin-bottom: 20px; }
+  .left-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: #5e9993; margin-bottom: 24px;
+  }
+  .left h1 {
+    font-size: 36px; font-weight: 700; line-height: 1.1;
+    letter-spacing: -0.025em; color: #fff; margin: 0 0 20px 0;
+  }
+  .left p {
+    font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.65);
+    margin: 0 0 16px 0;
+  }
+  .divider { width: 100%; height: 1px; background: rgba(255,255,255,0.1); margin: 28px 0; }
+
+  .what-to-expect { display: flex; flex-direction: column; gap: 20px; }
+  .expect-item { display: flex; gap: 14px; align-items: flex-start; }
+  .expect-dot {
+    width: 28px; height: 28px; background: rgba(94,153,147,0.2);
+    border-radius: 50%; flex-shrink: 0; display: flex;
+    align-items: center; justify-content: center; margin-top: 1px;
+  }
+  .expect-dot span { font-size: 12px; font-weight: 700; color: #5e9993; }
+  .expect-text { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.65); }
+  .expect-text strong { color: #fff; display: block; margin-bottom: 2px; font-size: 15px; }
+
+  .trust-items { display: flex; flex-direction: column; gap: 10px; margin-top: auto; padding-top: 40px; }
+  .trust-item { font-size: 13px; color: rgba(255,255,255,0.4); display: flex; align-items: center; gap: 8px; }
+  .trust-item span.tick { color: #5e9993; font-weight: 700; }
+
+  /* RIGHT PANEL — CALENDAR */
+  .right {
+    display: flex;
+    flex-direction: column;
+    background: #f8f8fb;
+  }
+  .calendar-header {
+    padding: 40px 48px 24px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+  .calendar-header h2 {
+    font-size: 20px; font-weight: 700; color: #111; margin: 0 0 6px 0;
+  }
+  .calendar-header p {
+    font-size: 14px; color: #888; margin: 0;
+  }
+
+  .embed-wrap {
+    flex: 1;
+    position: relative;
+    background: #fff;
+  }
+
+  iframe#proton-cal {
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    border: none;
+    display: block;
+  }
+
+  /* FALLBACK — shown if iframe fails */
+  .fallback {
+    display: none;
+    padding: 80px 48px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .fallback.visible { display: flex; }
+  .fallback h3 { font-size: 24px; font-weight: 700; color: #111; margin: 0; }
+  .fallback p { font-size: 16px; color: #666; margin: 0; max-width: 400px; line-height: 1.65; }
+  .fallback-btn {
+    display: inline-block; background: #232b53; color: #fff;
+    padding: 16px 36px; font-size: 16px; font-weight: 700;
+    text-decoration: none; border-radius: 4px;
+    transition: background 0.2s;
+  }
+  .fallback-btn:hover { background: #13544e; }
+
+  /* FOOTER */
+  footer {
+    background: #232b53; padding: 28px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+  }
+  footer p { font-size: 13px; color: rgba(255,255,255,0.3); margin: 0; }
+  footer a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; }
+  footer a:hover { color: rgba(255,255,255,0.8); }
+
+  @media (max-width: 900px) {
+    .page { grid-template-columns: 1fr; }
+    .left { position: relative; top: 0; height: auto; padding: 48px 28px; }
+    .left h1 { font-size: 28px; }
+    .trust-items { padding-top: 32px; }
+    .nav-inner { padding: 0 20px; }
+    iframe#proton-cal { min-height: 600px; }
+    .calendar-header { padding: 28px 20px 16px; }
+    footer { padding: 24px 20px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="uploads/logo_green_trans.png" alt="In the Feed">
+      </a>
+      <a href="/" class="nav-back">← Back to site</a>
+      <a href="https://wa.me/18052030564?text=Hi%20Shannon%2C%20I%20found%20you%20through%20your%20website%20and%20have%20a%20question%20before%20booking." target="_blank" rel="noopener noreferrer" class="nav-cta">Questions? WhatsApp</a>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <!-- LEFT -->
+    <aside class="left">
+      <div class="left-accent"></div>
+      <div class="left-label">Discovery Call · 30 Minutes</div>
+      <h1>Let's look at your pipeline gap.</h1>
+      <p>No pitch. No pressure. One honest conversation about where your content is and where it needs to be.</p>
+      <p>Pick a time that works for you.</p>
+
+      <div class="divider"></div>
+
+      <div class="what-to-expect">
+        <div class="expect-item">
+          <div class="expect-dot"><span>1</span></div>
+          <div class="expect-text">
+            <strong>Your current content</strong>
+            We look at what you're publishing and who it's actually speaking to.
+          </div>
+        </div>
+        <div class="expect-item">
+          <div class="expect-dot"><span>2</span></div>
+          <div class="expect-text">
+            <strong>The pipeline gap</strong>
+            We identify where enterprise buyers are dropping off or not seeing you at all.
+          </div>
+        </div>
+        <div class="expect-item">
+          <div class="expect-dot"><span>3</span></div>
+          <div class="expect-text">
+            <strong>What it takes to close it</strong>
+            Straight talk about whether In the Feed is the right fit and what the first 90 days would look like.
+          </div>
+        </div>
+      </div>
+
+      <div class="trust-items">
+        <div class="trust-item"><span class="tick">✓</span> No contract required</div>
+        <div class="trust-item"><span class="tick">✓</span> Cancel anytime after 90 days</div>
+        <div class="trust-item"><span class="tick">✓</span> Everything built stays yours</div>
+        <div class="trust-item"><span class="tick">✓</span> Serving UK, EU, and Canada</div>
+      </div>
+    </aside>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <div class="calendar-header">
+        <h2>Choose a time with Shannon</h2>
+        <p>All times shown in your local timezone.</p>
+      </div>
+
+      <div class="embed-wrap">
+        <iframe
+          id="proton-cal"
+          src="https://calendar.proton.me/u/6/bookings#ELZbEr7OAVlLOaMsGkPgzeNVuI86E5UTOCOgIZjD0gs="
+          title="Book a Discovery Call with Shannon Kuykendall"
+          loading="lazy"
+          allow="camera 'none'; microphone 'none'"
+        ></iframe>
+
+        <!-- Fallback if Proton blocks iframe -->
+        <div class="fallback" id="iframe-fallback">
+          <h3>Pick a time that works for you.</h3>
+          <p>Our booking calendar opens in a new tab. Takes 30 seconds to find a slot.</p>
+          <a href="https://calendar.proton.me/u/6/bookings#ELZbEr7OAVlLOaMsGkPgzeNVuI86E5UTOCOgIZjD0gs=" target="_blank" rel="noopener noreferrer" class="fallback-btn">Open booking calendar</a>
+          <p style="font-size:13px; color:#bbb;">Or message on <a href="https://wa.me/18052030564?text=Hi%20Shannon%2C%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20book%20a%20discovery%20call." target="_blank" rel="noopener noreferrer" style="color:#13544e; font-weight:600;">WhatsApp</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 In the Feed. <a href="/index.html#privacy">Privacy Policy</a> · <a href="/index.html#terms">Terms</a> · <a href="/index.html#gdpr">GDPR</a></p>
+    <p><a href="https://wa.me/18052030564?text=Hi%20Shannon%2C%20I%20found%20you%20through%20your%20website%20and%20have%20a%20question." target="_blank" rel="noopener noreferrer">Questions? WhatsApp +1 (805) 203-0564</a></p>
+  </footer>
+
+  <script>
+    // Detect if iframe is blocked (X-Frame-Options) and show fallback
+    var iframe = document.getElementById('proton-cal');
+    var fallback = document.getElementById('iframe-fallback');
+    var loaded = false;
+
+    iframe.addEventListener('load', function() {
+      loaded = true;
+      // Try to detect blank/error page — if contentDocument accessible, it loaded fine
+      try {
+        var doc = iframe.contentDocument || iframe.contentWindow.document;
+        if (doc && (doc.title === '' || doc.body.innerHTML === '')) {
+          iframe.style.display = 'none';
+          fallback.classList.add('visible');
+        }
+      } catch(e) {
+        // Cross-origin — means it loaded from Proton's domain (good)
+        // No action needed
+      }
+    });
+
+    // If iframe hasn't loaded in 8 seconds, show fallback
+    setTimeout(function() {
+      if (!loaded) {
+        iframe.style.display = 'none';
+        fallback.classList.add('visible');
+      }
+    }, 8000);
+  </script>
+
+</body>
+</html>
