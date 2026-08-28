@@ -1,1 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Room Test | In the Feed</title>
+<meta name="description" content="Five questions to find out which room your FemTech content is actually talking to: consumer, subscriber, or enterprise.">
+<meta property="og:title" content="The Room Test | In the Feed">
+<meta property="og:description" content="Five questions to find out which room your FemTech content is actually talking to: consumer, subscriber, or enterprise.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://inthefeed.com/room-test-quiz">
+<meta property="og:image" content="https://inthefeed.com/uploads/og-image.png">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://inthefeed.com/room-test-quiz">
+<link rel="icon" type="image/png" href="/uploads/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXVF1LTN5X"></script>
+<script>
+  try {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){window.dataLayer.push(arguments);};
+    window.gtag('consent', 'default', { analytics_storage: 'denied' });
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-ZXVF1LTN5X');
+    if (localStorage.getItem('itf_cookie_consent') === 'accepted') {
+      window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+  } catch(e) {}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: 'DM Sans', sans-serif; background: #fff; color: #111; -webkit-font-smoothing: antialiased; }
+  a { color: #13544e; }
+  .brandbar { padding: 26px 48px; display: flex; align-items: center; }
+  .brandbar img { height: 40px; width: auto; display: block; }
+  footer.mini { background: #232b53; padding: 24px 48px; text-align: center; }
+  footer.mini p { font-size: 12px; color: rgba(255,255,255,0.35); margin: 0; }
+  footer.mini a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  footer.mini a:hover { color: rgba(255,255,255,0.85); }
+  @media (max-width: 760px) {
+    .brandbar { padding: 20px 22px; }
+    footer.mini { padding: 22px 22px; }
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 40px 48px 96px; }
+  .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #13544e; margin-bottom: 16px; }
+  h1.main { font-size: 44px; font-weight: 700; line-height: 1.1; letter-spacing: -0.03em; color: #232b53; margin: 0 0 16px 0; text-wrap: pretty; }
+  p.sub { font-size: 18px; line-height: 1.65; color: #666; margin: 0 0 48px 0; text-wrap: pretty; }
+  .qblock { border-top: 1px solid #e8e8ee; padding: 36px 0 8px; }
+  .qnum { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #a0a0ad; margin-bottom: 10px; }
+  .qtext { font-size: 21px; font-weight: 700; color: #111; line-height: 1.35; margin: 0 0 20px 0; text-wrap: pretty; }
+  .opts { display: flex; flex-direction: column; gap: 10px; }
+  .opt { display: flex; gap: 13px; align-items: flex-start; padding: 16px 18px; border: 1.5px solid #e6e6ec; border-radius: 8px; cursor: pointer; transition: border-color .15s, background .15s; }
+  .opt:hover { border-color: #5e9993; background: #fafcfc; }
+  .opt input { margin: 3px 0 0 0; accent-color: #13544e; width: 17px; height: 17px; flex-shrink: 0; cursor: pointer; }
+  .opt span { font-size: 15.5px; line-height: 1.55; color: #333; }
+  .opt.sel { border-color: #13544e; background: #f4f9f8; }
+  .submit-row { margin-top: 44px; padding-top: 36px; border-top: 1px solid #e8e8ee; }
+  .btn-primary { background: #5e9993; color: #fff; border: none; padding: 17px 40px; font-size: 16px; font-weight: 700; border-radius: 4px; cursor: pointer; font-family: inherit; transition: background .2s; }
+  .btn-primary:hover { background: #13544e; }
+  .btn-primary:disabled { background: #5e9993; opacity: .42; cursor: not-allowed; }
+  .hint { font-size: 13px; color: #999; margin-top: 12px; }
+  /* RESULT */
+  #result { display: none; }
+  .res-card { background: linear-gradient(160deg, #232b53 0%, #13544e 100%); border-radius: 14px; padding: 52px; color: #fff; margin-bottom: 32px; }
+  .res-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #5e9993; margin-bottom: 14px; }
+  .res-card h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; margin: 0 0 24px 0; }
+  .res-card p { font-size: 16.5px; line-height: 1.75; color: rgba(255,255,255,0.78); margin: 0 0 16px 0; text-wrap: pretty; }
+  .split-line { background: rgba(94,153,147,.16); border-radius: 8px; padding: 20px 24px; margin: 0 0 26px 0; }
+  .split-line .sl-label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #5e9993; margin-bottom: 8px; }
+  .split-line p { font-size: 16px; line-height: 1.65; color: #fff; margin: 0; font-weight: 500; }
+  .echo { border-left: 2px solid #5e9993; padding: 4px 0 4px 20px; margin: 28px 0 0 0; }
+  .echo .echo-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 8px; }
+  .echo .echo-text { font-size: 16px; line-height: 1.6; color: #fff; font-weight: 500; }
+  .soft-cta { border: 1px solid #e6e6ec; border-radius: 12px; padding: 40px; }
+  .soft-cta h3 { font-size: 24px; font-weight: 700; color: #111; margin: 0 0 10px 0; letter-spacing: -0.02em; }
+  .soft-cta p { font-size: 16px; line-height: 1.7; color: #666; margin: 0 0 26px 0; text-wrap: pretty; }
+  .soft-cta a { display: inline-block; background: #13544e; color: #fff; padding: 15px 32px; font-size: 15px; font-weight: 700; text-decoration: none; border-radius: 4px; transition: background .2s; }
+  .soft-cta a:hover { background: #232b53; }
+  @media (max-width: 760px) {
+    .wrap { padding: 24px 22px 72px; }
+    h1.main { font-size: 30px; }
+    .qtext { font-size: 18px; }
+    .res-card { padding: 32px 26px; }
+    .res-card h2 { font-size: 30px; }
+    .soft-cta { padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+  <div class="brandbar"><img src="/uploads/ITF_logo_green-c7426375.png" alt="In the Feed" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='../uploads/ITF_logo_green-c7426375.png';}"></div>
+  <div class="wrap">
 
+    <div id="quiz">
+      <div class="eyebrow">The Room Test · 5 questions</div>
+      <h1 class="main">Which room is your content in?</h1>
+      <p class="sub">Answer honestly rather than aspirationally. The room you want to be in and the room your content is currently in are usually not the same, and that gap is the whole point of this.</p>
+      <div class="qblock">
+        <div class="qnum">Question 1 of 5</div>
+        <p class="qtext">Who signs the check for your product?</p>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="q0" value="consumer" data-text="The person using it. She pays with her own card."><span>The person using it. She pays with her own card.</span></label>
+          <label class="opt"><input type="radio" name="q0" value="subscriber" data-text="A subscriber who decides every month whether to keep paying."><span>A subscriber who decides every month whether to keep paying.</span></label>
+          <label class="opt"><input type="radio" name="q0" value="enterprise" data-text="A procurement committee, health system, employer, or payer."><span>A procurement committee, health system, employer, or payer.</span></label>
+        </div>
+      </div>
+      <div class="qblock">
+        <div class="qnum">Question 2 of 5</div>
+        <p class="qtext">What does your LinkedIn content talk about most?</p>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="q1" value="consumer" data-text="The condition, the symptoms, the lived experience."><span>The condition, the symptoms, the lived experience.</span></label>
+          <label class="opt"><input type="radio" name="q1" value="subscriber" data-text="Features, how-tos, and getting more out of the product."><span>Features, how-tos, and getting more out of the product.</span></label>
+          <label class="opt"><input type="radio" name="q1" value="enterprise" data-text="Outcomes data, ROI, integration, and how you operate at scale."><span>Outcomes data, ROI, integration, and how you operate at scale.</span></label>
+        </div>
+      </div>
+      <div class="qblock">
+        <div class="qnum">Question 3 of 5</div>
+        <p class="qtext">If someone read your last five posts, could they name your buyer?</p>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="q2" value="consumer" data-text="They would say &quot;women who need this.&quot;"><span>They would say "women who need this."</span></label>
+          <label class="opt"><input type="radio" name="q2" value="subscriber" data-text="They would say &quot;people already using it.&quot;"><span>They would say "people already using it."</span></label>
+          <label class="opt"><input type="radio" name="q2" value="enterprise" data-text="They would name a health system, an employer, or a payer."><span>They would name a health system, an employer, or a payer.</span></label>
+        </div>
+      </div>
+      <div class="qblock">
+        <div class="qnum">Question 4 of 5</div>
+        <p class="qtext">Where does your pipeline actually stall right now?</p>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="q3" value="consumer" data-text="Plenty of interest, very few people actually buying."><span>Plenty of interest, very few people actually buying.</span></label>
+          <label class="opt"><input type="radio" name="q3" value="subscriber" data-text="People sign up, then quietly stop paying within a few months."><span>People sign up, then quietly stop paying within a few months.</span></label>
+          <label class="opt"><input type="radio" name="q3" value="enterprise" data-text="Pilots that go well and never convert to a contract."><span>Pilots that go well and never convert to a contract.</span></label>
+        </div>
+      </div>
+      <div class="qblock">
+        <div class="qnum">Question 5 of 5</div>
+        <p class="qtext">What's the last thing a real buyer said before they paid, or didn't?</p>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="q4" value="consumer" data-text="&quot;I'm not sure it would work for someone like me.&quot;"><span>"I'm not sure it would work for someone like me."</span></label>
+          <label class="opt"><input type="radio" name="q4" value="subscriber" data-text="&quot;I couldn't really see what I was still paying for.&quot;"><span>"I couldn't really see what I was still paying for."</span></label>
+          <label class="opt"><input type="radio" name="q4" value="enterprise" data-text="&quot;We love it, we just need to get it through committee.&quot;"><span>"We love it, we just need to get it through committee."</span></label>
+        </div>
+      </div>
+      <div class="submit-row">
+        <button class="btn-primary" id="see-result" disabled>See my result</button>
+        <div class="hint" id="hint">Answer all five questions to see your result.</div>
+      </div>
+    </div>
+
+    <div id="result">
+      <div class="res-card">
+        <div class="split-line" id="split-line" style="display:none">
+          <div class="sl-label">First, the mismatch</div>
+          <p id="split-text"></p>
+        </div>
+      <div class="res-body" data-room="consumer" style="display:none">
+        <div class="res-label">Your result</div>
+        <h2>The Consumer Room</h2>
+        <p>Your buyer is the person using the product, and she is paying with her own money. That means every post has to do two jobs at once: prove the thing works, and prove it works for someone like her specifically. Most FemTech content aimed at consumers does the first and skips the second, which is why engagement looks healthy while conversion does not.</p>
+        <p>The fix is not more content. It is content that removes personal risk: specific outcomes, specific people, specific circumstances, and a visible next step that costs almost nothing to take.</p>
+      </div>
+      <div class="res-body" data-room="subscriber" style="display:none">
+        <div class="res-label">Your result</div>
+        <h2>The Subscriber Room</h2>
+        <p>Your buyer already said yes once. The decision you are actually influencing is the one they make silently every month, which is whether to keep paying. That is a different content problem from acquisition, and it is the one most founders never build for.</p>
+        <p>Content in this room has to make ongoing value visible outside the product. If the only place a subscriber sees the benefit is inside the app, the renewal is decided by memory, and memory is not on your side.</p>
+      </div>
+      <div class="res-body" data-room="enterprise" style="display:none">
+        <div class="res-label">Your result</div>
+        <h2>The Enterprise Room</h2>
+        <p>Your buyer is not the person using the product. It is a health system director, an employer benefits lead, or a payer CMO, and they are making a procurement decision with their own reputation attached. Consumer-style content does not reach them, and when it does, it does not help them make the case internally.</p>
+        <p>This is where Pilot Purgatory comes from: real pilots, real enthusiasm, no conversion. The content has to arm someone inside that organisation to argue for you in a room you will never be in.</p>
+      </div>
+        <div class="echo">
+          <div class="echo-label">The last thing you heard from a buyer</div>
+          <div class="echo-text" id="echo-text"></div>
+        </div>
+      </div>
+      <div class="soft-cta">
+        <h3>Want the full positioning built for this room?</h3>
+        <p>The Right Room Session is one 90-minute call. Within 48 hours you get a positioning statement, content pillars, a call-to-action framework, and an inbound conversion path, all built for the room you just landed in.</p>
+        <a href="/right-room-session">See what's involved</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+  (function(){
+    var total = 5;
+    var btn = document.getElementById('see-result');
+    var hint = document.getElementById('hint');
+
+    document.querySelectorAll('.opt input').forEach(function(input){
+      input.addEventListener('change', function(){
+        document.querySelectorAll('input[name="'+input.name+'"]').forEach(function(sib){
+          sib.closest('.opt').classList.remove('sel');
+        });
+        input.closest('.opt').classList.add('sel');
+        var answered = document.querySelectorAll('.opt input:checked').length;
+        btn.disabled = answered < total;
+        hint.textContent = answered < total
+          ? (total - answered) + ' question' + (total - answered === 1 ? '' : 's') + ' left.'
+          : 'Ready.';
+      });
+    });
+
+    btn.addEventListener('click', function(){
+      var tally = { consumer: 0, subscriber: 0, enterprise: 0 };
+      var first = null, last = null;
+      for (var i = 0; i < total; i++) {
+        var sel = document.querySelector('input[name="q'+i+'"]:checked');
+        if (!sel) return;
+        tally[sel.value]++;
+        if (i === 0) first = sel.value;
+        if (i === total - 1) last = sel.getAttribute('data-text');
+      }
+      var max = Math.max(tally.consumer, tally.subscriber, tally.enterprise);
+      var winners = Object.keys(tally).filter(function(k){ return tally[k] === max; });
+      var room = winners.length === 1 ? winners[0] : (winners.indexOf(first) > -1 ? first : winners[0]);
+
+      document.querySelectorAll('.res-body').forEach(function(el){
+        el.style.display = el.getAttribute('data-room') === room ? 'block' : 'none';
+      });
+      var SPLIT = {
+        consumer: 'You know the person using your product is the one paying for it. Your content is written for someone else, and that gap is the whole problem.',
+        subscriber: 'You know the decision that matters is the monthly one to keep paying. Your content is still written for the person who has not signed up yet.',
+        enterprise: 'You know a procurement committee signs the contract. Your content is still written for the person using the product. That gap is the whole problem.'
+      };
+      var splitEl = document.getElementById('split-line');
+      if (first && first !== room) {
+        document.getElementById('split-text').textContent = SPLIT[first];
+        splitEl.style.display = 'block';
+      } else {
+        splitEl.style.display = 'none';
+      }
+      document.getElementById('echo-text').textContent = last;
+      document.getElementById('quiz').style.display = 'none';
+      document.getElementById('result').style.display = 'block';
+      window.scrollTo(0, 0);
+      try { window.gtag('event', 'room_test_result', { room: room, payer: first, mismatch: (first !== room) }); } catch(e) {}
+    });
+  })();
+  </script>
+  <footer class="mini">
+    <p>© 2026 In the Feed · <a href="/index.html#privacy">Privacy</a> · <a href="/index.html#terms">Terms</a> · <a href="/index.html#gdpr">GDPR</a></p>
+  </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded',function(){
+    if(localStorage.getItem('itf_cookie_consent'))return;
+    var bar=document.createElement('div');
+    bar.id='itf-cookie-bar';
+    bar.style.cssText='position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#232b53;color:#fff;padding:18px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;font-family:\'DM Sans\',sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,0.18)';
+    bar.innerHTML='<span style="font-size:14px;line-height:1.55;color:rgba(255,255,255,0.8);max-width:640px">We use cookies to understand how this page performs. Analytics only, nothing sold on. <a href="/index.html#privacy" style="color:#5e9993">Privacy Policy</a>.</span><span style="display:flex;gap:10px"><button id="itf-cb-decline" style="background:none;border:1px solid rgba(255,255,255,0.35);color:#fff;padding:9px 18px;font-size:13px;font-weight:600;border-radius:4px;cursor:pointer;font-family:inherit">Decline</button><button id="itf-cb-accept" style="background:#5e9993;border:none;color:#fff;padding:9px 18px;font-size:13px;font-weight:600;border-radius:4px;cursor:pointer;font-family:inherit">Accept</button></span>';
+    document.body.appendChild(bar);
+    document.getElementById('itf-cb-accept').onclick=function(){
+      localStorage.setItem('itf_cookie_consent','accepted');
+      try{window.gtag('consent','update',{analytics_storage:'granted'});}catch(e){}
+      bar.remove();
+    };
+    document.getElementById('itf-cb-decline').onclick=function(){
+      localStorage.setItem('itf_cookie_consent','declined');
+      bar.remove();
+    };
+  });
+  </script>
+</body>
+</html>
