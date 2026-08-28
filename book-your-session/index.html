@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book Your Right Room Session | In the Feed</title>
+<meta name="description" content="Your Right Room Session is paid for. Pick a time that works and we'll get started.">
+<meta property="og:title" content="Book Your Right Room Session | In the Feed">
+<meta property="og:description" content="Your Right Room Session is paid for. Pick a time that works and we'll get started.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://inthefeed.com/book-your-session">
+<meta property="og:image" content="https://inthefeed.com/uploads/og-image.png">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://inthefeed.com/book-your-session">
+<link rel="icon" type="image/png" href="/uploads/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXVF1LTN5X"></script>
+<script>
+  try {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){window.dataLayer.push(arguments);};
+    window.gtag('consent', 'default', { analytics_storage: 'denied' });
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-ZXVF1LTN5X');
+    if (localStorage.getItem('itf_cookie_consent') === 'accepted') {
+      window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+  } catch(e) {}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: 'DM Sans', sans-serif; background: #fff; color: #111; -webkit-font-smoothing: antialiased; }
+  a { color: #13544e; }
+  .brandbar { padding: 26px 48px; display: flex; align-items: center; }
+  .brandbar img { height: 40px; width: auto; display: block; }
+  footer.mini { background: #232b53; padding: 24px 48px; text-align: center; }
+  footer.mini p { font-size: 12px; color: rgba(255,255,255,0.35); margin: 0; }
+  footer.mini a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  footer.mini a:hover { color: rgba(255,255,255,0.85); }
+  @media (max-width: 760px) {
+    .brandbar { padding: 20px 22px; }
+    footer.mini { padding: 22px 22px; }
+  }
+  .wrap { max-width: 620px; margin: 0 auto; padding: 72px 48px 110px; text-align: center; }
+  .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #13544e; margin-bottom: 18px; }
+  h1.main { font-size: 44px; font-weight: 700; line-height: 1.08; letter-spacing: -0.03em; color: #232b53; margin: 0 0 16px 0; text-wrap: pretty; }
+  p.sub { font-size: 18px; line-height: 1.65; color: #666; margin: 0 0 44px 0; text-wrap: pretty; }
+  .card { border: 1px solid #e6e6ec; border-radius: 14px; padding: 48px 40px; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+  .card h3 { font-size: 24px; font-weight: 700; color: #111; letter-spacing: -0.02em; margin: 0; }
+  .card p { font-size: 15px; color: #888; margin: 0; line-height: 1.6; }
+  .open-btn { display: inline-block; background: #13544e; color: #fff; padding: 16px 40px; font-size: 16px; font-weight: 700; text-decoration: none; border-radius: 4px; transition: background .2s; margin-top: 4px; }
+  .open-btn:hover { background: #232b53; }
+  .auto-label { font-size: 13px; color: #bbb; }
+  .prep { margin-top: 40px; text-align: left; border-top: 1px solid #eee; padding-top: 32px; }
+  .prep .kicker { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #999; margin-bottom: 14px; }
+  .prep ul { margin: 0; padding-left: 20px; }
+  .prep li { font-size: 15px; line-height: 1.75; color: #666; margin-bottom: 6px; }
+  @media (max-width: 760px) {
+    .wrap { padding: 44px 22px 80px; }
+    h1.main { font-size: 30px; }
+    .card { padding: 34px 24px; }
+  }
+</style>
+</head>
+<body>
+  <div class="brandbar"><img src="/uploads/ITF_logo_green-c7426375.png" alt="In the Feed" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='../uploads/ITF_logo_green-c7426375.png';}"></div>
+  <div class="wrap">
+    <div class="eyebrow">Payment received · 90 minutes</div>
+    <h1 class="main">Book Your Right Room Session</h1>
 
+    <div class="card">
+      <h3>Your booking calendar is opening.</h3>
+      <p>Didn't open automatically? Use the button below.</p>
+      <a href="https://calendar.proton.me/bookings#-LtGG4a3vqST_u12XY1J0MQrHwCACzod8bbzpqfq4CQ=" target="_blank" rel="noopener noreferrer" class="open-btn" id="open-btn">Open booking calendar</a>
+      <div class="auto-label" id="auto-label">Opening in <span id="countdown">3</span>...</div>
+    </div>
+
+    <div class="prep">
+      <div class="kicker">Before the call</div>
+      <ul>
+        <li>Have your last five posts to hand, or the link to your LinkedIn profile.</li>
+        <li>Know roughly where deals stall: at first contact, mid-conversation, or at the point of signing.</li>
+        <li>Bring one real thing a buyer said to you recently, good or bad.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    var protonUrl = 'https://calendar.proton.me/bookings#-LtGG4a3vqST_u12XY1J0MQrHwCACzod8bbzpqfq4CQ=';
+    var countdown = document.getElementById('countdown');
+    var autoLabel = document.getElementById('auto-label');
+    var count = 3;
+    var opened = false;
+    function tick() {
+      count--;
+      if (count > 0) {
+        countdown.textContent = count;
+        setTimeout(tick, 1000);
+      } else if (!opened) {
+        opened = true;
+        window.open(protonUrl, '_blank');
+        autoLabel.textContent = 'Calendar opened in a new tab.';
+      }
+    }
+    setTimeout(tick, 1000);
+    document.getElementById('open-btn').addEventListener('click', function() {
+      opened = true;
+      autoLabel.textContent = 'Calendar opened in a new tab.';
+    });
+  </script>
+  <footer class="mini">
+    <p>© 2026 In the Feed · <a href="/index.html#privacy">Privacy</a> · <a href="/index.html#terms">Terms</a> · <a href="/index.html#gdpr">GDPR</a></p>
+  </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded',function(){
+    if(localStorage.getItem('itf_cookie_consent'))return;
+    var bar=document.createElement('div');
+    bar.id='itf-cookie-bar';
+    bar.style.cssText='position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#232b53;color:#fff;padding:18px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;font-family:\'DM Sans\',sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,0.18)';
+    bar.innerHTML='<span style="font-size:14px;line-height:1.55;color:rgba(255,255,255,0.8);max-width:640px">We use cookies to understand how this page performs. Analytics only, nothing sold on. <a href="/index.html#privacy" style="color:#5e9993">Privacy Policy</a>.</span><span style="display:flex;gap:10px"><button id="itf-cb-decline" style="background:none;border:1px solid rgba(255,255,255,0.35);color:#fff;padding:9px 18px;font-size:13px;font-weight:600;border-radius:4px;cursor:pointer;font-family:inherit">Decline</button><button id="itf-cb-accept" style="background:#5e9993;border:none;color:#fff;padding:9px 18px;font-size:13px;font-weight:600;border-radius:4px;cursor:pointer;font-family:inherit">Accept</button></span>';
+    document.body.appendChild(bar);
+    document.getElementById('itf-cb-accept').onclick=function(){
+      localStorage.setItem('itf_cookie_consent','accepted');
+      try{window.gtag('consent','update',{analytics_storage:'granted'});}catch(e){}
+      bar.remove();
+    };
+    document.getElementById('itf-cb-decline').onclick=function(){
+      localStorage.setItem('itf_cookie_consent','declined');
+      bar.remove();
+    };
+  });
+  </script>
+</body>
+</html>
