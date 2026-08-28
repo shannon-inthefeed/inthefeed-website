@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Funnel pages — reachable by link only, not indexed
+Disallow: /room-test
+Disallow: /room-test-quiz
+Disallow: /right-room-session
+Disallow: /book-your-session
+
 Sitemap: https://inthefeed.com/sitemap.xml

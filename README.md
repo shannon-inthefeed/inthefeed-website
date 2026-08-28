@@ -15,6 +15,10 @@
 ├── index.html                   # Deploy this — generated from the source file
 ├── support.js                   # Runtime — required alongside index.html
 ├── discovery.html               # /discovery — opens the booking link in a new tab
+├── room-test/index.html         # Funnel 1 — opt-in
+├── room-test-quiz/index.html    # Funnel 2 — quiz + result
+├── right-room-session/index.html # Funnel 3 — sales
+├── book-your-session/index.html # Funnel 4 — booking
 ├── robots.txt
 ├── sitemap.xml
 ├── README.md
@@ -35,7 +39,69 @@
 
 ---
 
-## Pages
+## Sales funnel pages
+
+Four standalone pages, each in its own folder so Render serves a clean URL. **No main nav on any of them** — each has one job. All four are `noindex, follow` so they don't compete with the main site in search, and all four carry Google Analytics with the same GDPR cookie banner as the main site.
+
+| Page | URL | File |
+|------|-----|------|
+| Opt-in | `/room-test` | `room-test/index.html` |
+| Quiz + result | `/room-test-quiz` | `room-test-quiz/index.html` |
+| Sales | `/right-room-session` | `right-room-session/index.html` |
+| Booking | `/book-your-session` | `book-your-session/index.html` |
+
+### The flow
+
+1. **Opt-in** (`/room-test`) — Sequenzy form captures first name and email. On submit, Sequenzy shows its own on-page thank-you directing them to their inbox. No redirect from this page.
+2. **Email** — they confirm their email, and the confirmation takes them to the quiz.
+3. **Quiz** (`/room-test-quiz`) — five questions, result reveals on the same page, soft CTA to the sales page.
+4. **Sales** (`/right-room-session`) — four Wise payment links, one per currency.
+5. **Booking** (`/book-your-session`) — sent manually by Shannon once the Wise payment notification arrives. Not part of the automated Sequenzy sequence.
+
+### ⚠️ Sequenzy form styling
+
+The style block inside `room-test/index.html` is **hand-written, not Sequenzy's**. Sequenzy's own block came through trimmed, so the form is styled here in DM Sans against the brand palette.
+
+If you edit the form in the Sequenzy dashboard, **re-paste only the `<form>` markup** and leave the `<style>` block alone. Pasting a fresh full embed will overwrite the styling and the form will look wrong.
+
+Form ID: `q45pyszqnkbv3lctnp8jr031`
+
+### Quiz logic
+
+Five multiple-choice questions, three options each, every option mapped to a room (consumer / subscriber / enterprise). Most-picked room wins; a tie falls back to Q1, since Q1 names the payer outright.
+
+The result has three moving parts:
+
+- **The room** — one of three diagnoses.
+- **The mismatch line** — shown only when Q1 disagrees with the majority. Labelled "First, the mismatch." Means they know who pays but are writing to someone else.
+- **The echo** — their Q5 answer quoted back under "The last thing you heard from a buyer."
+
+Fires a GA event `room_test_result` with `room`, `payer`, and `mismatch`.
+
+To change the result copy, edit the `.res-body` blocks in the markup. To change the mismatch copy, edit the `SPLIT` object in the page script.
+
+### Payment links (Wise)
+
+Same amount in every currency. Buttons are grouped as a currency picker, not four separate offers.
+
+| Currency | Amount | Link |
+|----------|--------|------|
+| USD | $1,350 | https://wise.com/pay/r/kjqlUl4YOIIRYZA |
+| GBP | £1,350 | https://wise.com/pay/r/cFyK7Nj1AgmUqjg |
+| CAD | CA$1,350 | https://wise.com/pay/r/sKnWpxcKE9_YtZk |
+| EUR | €1,350 | https://wise.com/pay/r/7QXwqZVoTi-i7tU |
+
+### Booking calendar
+
+`/book-your-session` points at Proton Calendar, which blocks iframe embedding. Same pattern as `/discovery`: a 3-second countdown auto-opens the booking link in a new tab, with a manual button and a WhatsApp fallback if the popup is blocked.
+
+Booking link: `https://calendar.proton.me/bookings#-LtGG4a3vqST_u12XY1J0MQrHwCACzod8bbzpqfq4CQ=`
+
+Note this is a **different** calendar from `/discovery`, which uses its own Proton booking link.
+
+---
+
+## Main site pages
 
 | Page | Hash Route |
 |------|-----------|
@@ -49,7 +115,7 @@
 | Terms of Service | `#terms` |
 | GDPR Compliance | `#gdpr` |
 
-`/discovery` is a separate file, not a hash route.
+`/discovery` is a separate file, not a hash route. The four funnel pages above are also separate, in their own folders.
 
 ---
 
@@ -84,7 +150,9 @@ Priced per channel, scoped to format complexity, cadence, and content origin (re
 
 ## Buttons and links
 
-Every call-to-action on the site points to **https://inthefeed.com/discovery** — a 30-minute discovery call. There is no separate booking or payment button anywhere on the site.
+Every call-to-action on the **main site** points to **https://inthefeed.com/discovery** — a 30-minute discovery call. There is no payment button anywhere on the main site.
+
+The **funnel pages are different**: `/right-room-session` sells directly via four Wise payment links and has no discovery call CTA at all. Keep these two paths separate — the main site warms people up to a conversation, the funnel sells the session outright.
 
 ---
 
