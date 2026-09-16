@@ -50,9 +50,17 @@ Four standalone pages, each in its own folder so Render serves a clean URL. **No
 | Sales | `/right-room-session` | `right-room-session/index.html` |
 | Booking | `/book-your-session` | `book-your-session/index.html` |
 
+### Entry points
+
+- **Main site nav** — "Room Test" link between Pricing and Blog, desktop and mobile, pointing to `https://inthefeed.com/room-test`.
+- **LinkedIn Featured** — `uploads/featured-room-test.png` (1200×627). Title: "Which room is your content talking to?" Description: "5 questions, under 90 seconds. Consumer, subscriber, or enterprise — find out which room your content is actually in." Link: `https://inthefeed.com/room-test`
+- **CRM** — Sequenzy sequences link to `/room-test`.
+
+Source file for the graphic: `screenshots/featured-room-test-v4.html`.
+
 ### The flow
 
-1. **Opt-in** (`/room-test`) — Sequenzy form captures first name and email. On submit, Sequenzy shows its own on-page thank-you directing them to their inbox. No redirect from this page.
+1. **Opt-in** (`/room-test`) — Sequenzy form captures first name and email. The redirect after submit is configured in the Sequenzy dashboard, not in this page's code.
 2. **Email** — they confirm their email, and the confirmation takes them to the quiz.
 3. **Quiz** (`/room-test-quiz`) — five questions, result reveals on the same page, soft CTA to the sales page.
 4. **Sales** (`/right-room-session`) — four Wise payment links, one per currency.
@@ -86,10 +94,10 @@ Same amount in every currency. Buttons are grouped as a currency picker, not fou
 
 | Currency | Amount | Link |
 |----------|--------|------|
-| USD | $1,350 | https://wise.com/pay/r/kjqlUl4YOIIRYZA |
-| GBP | £1,350 | https://wise.com/pay/r/cFyK7Nj1AgmUqjg |
-| CAD | CA$1,350 | https://wise.com/pay/r/sKnWpxcKE9_YtZk |
-| EUR | €1,350 | https://wise.com/pay/r/7QXwqZVoTi-i7tU |
+| USD | $1,497 | https://wise.com/pay/r/zY8JBULW9-4XNbk |
+| GBP | £1,497 | https://wise.com/pay/r/zNm0MuNhqesdvNk |
+| CAD | CA$1,497 | https://wise.com/pay/r/QYEDVFEV1R-YbKY |
+| EUR | €1,497 | https://wise.com/pay/r/rY5_ZBHOvogFECY |
 
 ### Booking calendar
 
@@ -131,7 +139,7 @@ Markets served: UK, EU, Canada, and the US.
 
 Prices display without currency symbols. Invoicing is in EUR unless otherwise agreed (see Terms).
 
-### The Right Room Session — 1,350
+### The Right Room Session — 1,497
 - One 90-minute session, recorded
 - Deliverables within 48 hours: positioning statement, content pillars, CTA framework, inbound conversion path
 - Fully standalone. No requirement to buy the Content Engine before or after
