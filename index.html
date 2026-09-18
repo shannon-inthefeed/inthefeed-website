@@ -102,6 +102,9 @@
     .itf-sec { padding-top: 80px !important; padding-bottom: 80px !important; }
     .itf-px { padding-left: 28px !important; padding-right: 28px !important; }
   }
+  @media (max-width: 960px) { .itf-tcard { min-height: 580px !important; } }
+  @media (max-width: 700px) { .itf-tcard { min-height: 620px !important; padding: 36px 28px !important; } }
+  @media (max-width: 480px) { .itf-tcard { min-height: 700px !important; } }
   @media (max-width: 768px) {
     .itf-navlinks { display: none !important; }
     .itf-navright { display: none !important; }
@@ -388,54 +391,40 @@ document.addEventListener('DOMContentLoaded',function(){
         </div>
       </section>
 
-      <!-- PROOF -->
+      <!-- TESTIMONIALS -->
       <section style="padding: 120px 48px; background: #f8f8fb;" class="itf-sec itf-px">
-        <div style="max-width: 1200px; margin: 0 auto;">
-          <div style="text-align: center; margin-bottom: 72px;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+          <div style="text-align: center; margin-bottom: 56px;">
             <div style="width: 40px; height: 3px; background: #13544e; margin: 0 auto 20px;"></div>
-            <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #13544e;">Real LinkedIn Results</span>
-            <h2 style="font-size: 48px; font-weight: 700; line-height: 1.08; letter-spacing: -0.025em; color: #111; margin: 20px auto 16px; max-width: 600px;" class="itf-h2">Every result is tied to pipeline. Not likes.</h2>
-            <p style="font-size: 18px; line-height: 1.7; color: #666; max-width: 480px; margin: 0 auto;">If content doesn't lead to sales conversations, we consider it broken.</p>
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #13544e;">Testimonials</span>
+            <h2 style="font-size: 48px; font-weight: 700; line-height: 1.08; letter-spacing: -0.025em; color: #111; margin: 20px auto 0; max-width: 620px;" class="itf-h2">What founders say after the session</h2>
           </div>
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;" class="itf-g3">
-            <div style="background: #fff; border-radius: 12px; padding: 40px; box-shadow: 0 1px 4px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.04); position: relative; overflow: hidden;">
-              <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: #232b53;"></div>
-              <div style="margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0;">
-                <img src="uploads/Group 17@2x.png" alt="DK Consulting" style="height: 48px; width: auto; max-width: 140px; object-fit: contain;">
+          <div onMouseEnter="{{ tPause }}" onMouseLeave="{{ tResume }}" style="display: flex; flex-direction: column; gap: 28px;">
+            <div style="background: #fff; border-radius: 14px; padding: 56px; box-shadow: 0 1px 4px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.04); display: flex; flex-direction: column; gap: 28px; min-height: 560px;" class="itf-tcard">
+              <img src="{{ tCur.logo }}" alt="{{ tCur.role }}" style="{{ tCur.logoStyle }}">
+              <p style="font-size: 26px; font-weight: 700; line-height: 1.38; letter-spacing: -0.015em; color: #111; margin: 0; max-width: 820px; text-wrap: pretty;">&ldquo;{{ tCur.pull }}&rdquo;</p>
+              <sc-if value="{{ tCur.hasBody }}" hint-placeholder-val="{{ true }}">
+                <div style="display: flex; flex-direction: column; gap: 14px; max-width: 760px;">
+                  <sc-for list="{{ tCur.paras }}" as="para" hint-placeholder-count="3">
+                    <p style="font-size: 16px; line-height: 1.75; color: #444; margin: 0; text-wrap: pretty;">{{ para }}</p>
+                  </sc-for>
+                </div>
+              </sc-if>
+              <div style="margin-top: auto; padding-top: 8px;">
+                <div style="font-size: 15px; font-weight: 700; color: #111;">{{ tCur.name }}</div>
+                <div style="font-size: 13px; color: #888; margin-top: 3px;">{{ tCur.role }}</div>
               </div>
-              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid #f0f0f0;">
-                <div><div style="font-size: 30px; font-weight: 700; color: #232b53; letter-spacing: -0.02em; line-height: 1;">23</div><div style="font-size: 11px; color: #999; margin-top: 4px; line-height: 1.4;">inbound sales calls</div></div>
-                <div><div style="font-size: 30px; font-weight: 700; color: #232b53; letter-spacing: -0.02em; line-height: 1;">4</div><div style="font-size: 11px; color: #999; margin-top: 4px; line-height: 1.4;">clients closed</div></div>
-                <div><div style="font-size: 30px; font-weight: 700; color: #232b53; letter-spacing: -0.02em; line-height: 1;">+67%</div><div style="font-size: 11px; color: #999; margin-top: 4px; line-height: 1.4;">revenue Q4 vs Q3</div></div>
-              </div>
-              <p style="font-size: 15px; line-height: 1.7; color: #333; font-style: italic; margin: 0 0 20px 0;">"The most important outcome was the consulting surge from September to December, traditionally a slow period, where my calendar filled up with qualified inbound inquiries."</p>
-              <div><div style="font-size: 14px; font-weight: 600; color: #111;">Danoosh Kapadia</div><div style="font-size: 12px; color: #888; margin-top: 2px;">Consultant + AI Training Founder</div></div>
             </div>
-            <div style="background: #fff; border-radius: 12px; padding: 40px; box-shadow: 0 1px 4px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.04); position: relative; overflow: hidden;">
-              <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: #542c73;"></div>
-              <div style="margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0;">
-                <img src="uploads/mg_logo_top.png" alt="Miss Galit LLC" style="height: 48px; width: auto; max-width: 160px; object-fit: contain;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+              <div style="display: flex; gap: 10px; align-items: center;">
+                <sc-for list="{{ tDots }}" as="dot" hint-placeholder-count="7">
+                  <button onClick="{{ dot.go }}" aria-label="Show testimonial" style="{{ dot.dotLight }}"></button>
+                </sc-for>
               </div>
-              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid #f0f0f0;">
-                <div><div style="font-size: 30px; font-weight: 700; color: #542c73; letter-spacing: -0.02em; line-height: 1;">14</div><div style="font-size: 11px; color: #999; margin-top: 4px; line-height: 1.4;">inbound conversations</div></div>
-                <div><div style="font-size: 30px; font-weight: 700; color: #542c73; letter-spacing: -0.02em; line-height: 1;">+45%</div><div style="font-size: 11px; color: #999; margin-top: 4px; line-height: 1.4;">revenue growth</div></div>
-                <div><div style="font-size: 30px; font-weight: 700; color: #542c73; letter-spacing: -0.02em; line-height: 1;">100%</div><div style="font-size: 11px; color: #999; margin-top: 4px; line-height: 1.4;">buyers cited content</div></div>
+              <div style="display: flex; gap: 12px;">
+                <button onClick="{{ tPrev }}" aria-label="Previous testimonial" style="width: 46px; height: 46px; border-radius: 50%; border: 1px solid #ddd; background: #fff; color: #232b53; font-size: 18px; line-height: 1; cursor: pointer; font-family: 'DM Sans', sans-serif;" style-hover="background: #232b53; color: #fff; border-color: #232b53;">&#8592;</button>
+                <button onClick="{{ tNext }}" aria-label="Next testimonial" style="width: 46px; height: 46px; border-radius: 50%; border: 1px solid #ddd; background: #fff; color: #232b53; font-size: 18px; line-height: 1; cursor: pointer; font-family: 'DM Sans', sans-serif;" style-hover="background: #232b53; color: #fff; border-color: #232b53;">&#8594;</button>
               </div>
-              <p style="font-size: 15px; line-height: 1.7; color: #333; font-style: italic; margin: 0 0 20px 0;">"Shifting from posts that perform to a channel that reliably sparks real opportunities."</p>
-              <div><div style="font-size: 14px; font-weight: 600; color: #111;">Miss Galit LLC</div><div style="font-size: 12px; color: #888; margin-top: 2px;">Women's Fashion Brand Founder</div></div>
-            </div>
-            <div style="background: #fff; border-radius: 12px; padding: 40px; box-shadow: 0 1px 4px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.04); position: relative; overflow: hidden;">
-              <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: #13544e;"></div>
-              <div style="margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0;">
-                <img src="uploads/netranks-logo.png" alt="NetRanks" style="height: 36px; width: auto; max-width: 160px; object-fit: contain;">
-              </div>
-              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid #f0f0f0;">
-                <div><div style="font-size: 30px; font-weight: 700; color: #13544e; letter-spacing: -0.02em; line-height: 1;">35</div><div style="font-size: 11px; color: #999; margin-top: 4px; line-height: 1.4;">demos generated</div></div>
-                <div><div style="font-size: 30px; font-weight: 700; color: #13544e; letter-spacing: -0.02em; line-height: 1;">75%</div><div style="font-size: 11px; color: #999; margin-top: 4px; line-height: 1.4;">close rate</div></div>
-                <div><div style="font-size: 30px; font-weight: 700; color: #13544e; letter-spacing: -0.02em; line-height: 1;">45</div><div style="font-size: 11px; color: #999; margin-top: 4px; line-height: 1.4;">days from standing start</div></div>
-              </div>
-              <p style="font-size: 15px; line-height: 1.7; color: #333; font-style: italic; margin: 0 0 20px 0;">"We built a LinkedIn system that generated 35 demos and closed 75% of them in under 45 days, from a standing start."</p>
-              <div><div style="font-size: 14px; font-weight: 600; color: #111;">NetRanks AI</div><div style="font-size: 12px; color: #888; margin-top: 2px;">B2B SaaS, AI Visibility + GEO Monitoring</div></div>
             </div>
           </div>
         </div>
@@ -776,31 +765,35 @@ document.addEventListener('DOMContentLoaded',function(){
 
           <!-- SESSION TESTIMONIALS -->
           <div style="margin-bottom: 24px;">
-            <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px;">What founders say about the session</div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;" class="itf-g2">
-            <div style="background: #fff; border-radius: 12px; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; border-top: 3px solid #13544e;">
-              <div style="display: flex; flex-direction: column; gap: 16px;">
-                <p style="font-size: 16px; line-height: 1.75; color: #333; margin: 0;">"I knew my methodology worked, but my marketing felt generic. I was competing with 'yoga at lunch' and struggling to show the ROI of wellbeing.</p>
-                <p style="font-size: 16px; line-height: 1.75; color: #333; margin: 0;">Shannon didn't just write content; she engineered the 'Bloom Method.' She took my process and structured it into a clear 4-stage product ladder (Seed, Sprout, Grow, Flourish) that Tech HR leaders instantly understood.</p>
-                <p style="font-size: 16px; line-height: 1.75; color: #333; margin: 0;">She turned my expertise into a scalable, sellable system. I'm no longer selling 'wellness'; I'm selling a strategic solution to burnout."</p>
-              </div>
-              <div>
-                <div style="font-size: 15px; font-weight: 700; color: #111;">Carmen Monsart</div>
-                <div style="font-size: 13px; color: #888; margin-top: 3px;">Bloom at Work</div>
-              </div>
-            </div>
-            <div style="background: #fff; border-radius: 12px; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; border-top: 3px solid #542c73;">
-              <div style="display: flex; flex-direction: column; gap: 16px;">
-                <p style="font-size: 16px; line-height: 1.75; color: #333; margin: 0;">"I was 'flirting' with business, great skills, but no direction. I was stuck in the 'generalist' trap, trying to help everyone.</p>
-                <p style="font-size: 16px; line-height: 1.75; color: #333; margin: 0;">Shannon didn't just give me advice; she gave me a complete strategic repositioning. She pinpointed the exact high-value niche (Health &amp; Wellness Tech) where my skills were worth double and mapped out the packages to match.</p>
-                <p style="font-size: 16px; line-height: 1.75; color: #333; margin: 0;">It felt like she read my mind. I went from confused to executing a high-level B2B strategy immediately."</p>
-              </div>
-              <div>
-                <div style="font-size: 15px; font-weight: 700; color: #111;">Bernice Noriah Kamit</div>
-                <div style="font-size: 13px; color: #888; margin-top: 3px;">Business Flirting</div>
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px;">What founders say after the session</div>
+          <div onMouseEnter="{{ tPause }}" onMouseLeave="{{ tResume }}" style="display: flex; flex-direction: column; gap: 28px;">
+            <div style="background: #fff; border-radius: 14px; padding: 56px; box-shadow: 0 1px 4px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.04); display: flex; flex-direction: column; gap: 28px; min-height: 560px;" class="itf-tcard">
+              <img src="{{ tCur.logo }}" alt="{{ tCur.role }}" style="{{ tCur.logoStyle }}">
+              <p style="font-size: 26px; font-weight: 700; line-height: 1.38; letter-spacing: -0.015em; color: #111; margin: 0; max-width: 820px; text-wrap: pretty;">&ldquo;{{ tCur.pull }}&rdquo;</p>
+              <sc-if value="{{ tCur.hasBody }}" hint-placeholder-val="{{ true }}">
+                <div style="display: flex; flex-direction: column; gap: 14px; max-width: 760px;">
+                  <sc-for list="{{ tCur.paras }}" as="para" hint-placeholder-count="3">
+                    <p style="font-size: 16px; line-height: 1.75; color: #444; margin: 0; text-wrap: pretty;">{{ para }}</p>
+                  </sc-for>
+                </div>
+              </sc-if>
+              <div style="margin-top: auto; padding-top: 8px;">
+                <div style="font-size: 15px; font-weight: 700; color: #111;">{{ tCur.name }}</div>
+                <div style="font-size: 13px; color: #888; margin-top: 3px;">{{ tCur.role }}</div>
               </div>
             </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+              <div style="display: flex; gap: 10px; align-items: center;">
+                <sc-for list="{{ tDots }}" as="dot" hint-placeholder-count="7">
+                  <button onClick="{{ dot.go }}" aria-label="Show testimonial" style="{{ dot.dotDark }}"></button>
+                </sc-for>
+              </div>
+              <div style="display: flex; gap: 12px;">
+                <button onClick="{{ tPrev }}" aria-label="Previous testimonial" style="width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.28); background: transparent; color: #fff; font-size: 18px; line-height: 1; cursor: pointer; font-family: 'DM Sans', sans-serif;" style-hover="background: #5e9993; color: #fff; border-color: #5e9993;">&#8592;</button>
+                <button onClick="{{ tNext }}" aria-label="Next testimonial" style="width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.28); background: transparent; color: #fff; font-size: 18px; line-height: 1; cursor: pointer; font-family: 'DM Sans', sans-serif;" style-hover="background: #5e9993; color: #fff; border-color: #5e9993;">&#8594;</button>
+              </div>
             </div>
+          </div>
           </div>
 
           <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.14); border-radius: 12px; padding: 44px 48px; margin-bottom: 80px;">
@@ -1168,8 +1161,39 @@ class Component extends DCLogic {
     faqOpen: {},
     pFaqOpen: {},
     formSent: false,
-
+    tIdx: 0,
   };
+
+  testimonials = [
+    { name: "Bernice Noriah Kamit", role: "Business Flirting", logo: "uploads/logo-business-flirting.png", logoH: 118,
+      pull: "It felt like she read my mind.",
+      paras: ["I was 'flirting' with business, great skills, but no direction. I was stuck in the 'generalist' trap, trying to help everyone.", "Shannon didn't just give me advice; she gave me a complete strategic repositioning. She pinpointed the exact high-value niche (Health & Wellness Tech) where my skills were worth double and mapped out the packages to match.", "I went from confused to executing a high-level B2B strategy immediately."] },
+    { name: "Carmen Monsart", role: "Bloom at Work", logo: "uploads/logo-bloom-at-work.png", logoH: 40,
+      pull: "I'm no longer selling 'wellness'; I'm selling a strategic solution to burnout.",
+      paras: ["I knew my methodology worked, but my marketing felt generic. I was competing with 'yoga at lunch' and struggling to show the ROI of wellbeing.", "Shannon didn't just write content; she engineered the 'Bloom Method.' She took my process and structured it into a clear 4-stage product ladder (Seed, Sprout, Grow, Flourish) that Tech HR leaders instantly understood.", "She turned my expertise into a scalable, sellable system."] },
+    { name: "Antonella Di Franco", role: "The Dynamic Virgo", logo: "uploads/logo-dynamic-virgo.jpg", logoH: 56,
+      pull: "She didn't just give me a plan; she gave me my confidence back.",
+      paras: ["I spent two years stuck in perfectionism, trying to force myself into a 'Boss Babe' mold that drained me. I thought my low energy and neurodivergence were weaknesses.", "Shannon didn't try to 'fix' me. She built an 'Energy-First Roadmap' designed specifically for my 5-hour workday. She showed me how to grow without masking and gave me the permission to launch imperfectly."] },
+    { name: "Sarah Wheadon", role: "Wedding & Life Celebrant", logo: "uploads/logo-sarah-wheadon.webp", logoH: 64,
+      pull: "Shannon is the mechanic you didn't know you needed.",
+      paras: ["I thought I had an SEO problem.", "Shannon showed me I had a 'Voice' problem. She didn't just give me keywords; she built a 'Voice Architecture' for my business. She turned my AI tool from a robot into a trained junior copywriter that actually sounds like me, warm, bubbly, and professional.", "I went from staring at a blinking cursor to having a 12-month content roadmap."] },
+    { name: "Danoosh Kapadia", role: "Consultant + AI Training Founder", logo: "uploads/Group 17@2x.png", logoH: 48,
+      pull: "The most important outcome was the consulting surge from September to December, traditionally a slow period, where my calendar filled up with qualified inbound inquiries.",
+      paras: [] },
+    { name: "Miss Galit LLC", role: "Women's Fashion Brand Founder", logo: "uploads/mg_logo_top.png", logoH: 48,
+      pull: "Shifting from posts that perform to a channel that reliably sparks real opportunities.",
+      paras: [] },
+    { name: "NetRanks AI", role: "B2B SaaS, AI Visibility + GEO Monitoring", logo: "uploads/netranks-logo.png", logoH: 36,
+      pull: "We built a LinkedIn system that generated 35 demos and closed 75% of them in under 45 days, from a standing start.",
+      paras: [] },
+  ];
+
+  _tStart() {
+    this._tStop();
+    this._tTimer = setInterval(() => this.setState(s => ({ tIdx: s.tIdx + 1 })), 9000);
+  }
+  _tStop() { if (this._tTimer) { clearInterval(this._tTimer); this._tTimer = null; } }
+  _tGo(n) { this._tStop(); this.setState({ tIdx: n }); this._tStart(); }
 
   posts = [
     { slug: 'wrong-room', image: 'uploads/blog-wrong-room.svg', title: 'Why Your FemTech Content Is Talking to the Wrong Room', category: 'Positioning', date: 'June 18, 2026', readTime: '6 min read', excerpt: 'Many FemTech founders have a proven product, real outcomes data, and existing clients. Their content is still talking to the person who uses the product, not the person who pays for it. Sometimes that payer is a consumer. Sometimes a subscriber. Sometimes a procurement committee. The gap is the same either way.', content: [{ type: 'p', text: 'You have a proven product. Clinical results. Existing clients. Your LinkedIn feed is full of content that gets engagement. Other founders share it. Users comment.' }, { type: 'p', text: 'The person who pays does not.' }, { type: 'p', text: 'Every FemTech business is selling into one of three rooms. A consumer buying the product herself. A subscriber deciding whether to renew. Or an enterprise buyer signing a contract: a health system director, an employer benefits lead, a payer CMO. Each room needs a different case made in different language.' }, { type: 'p', text: 'Many founders are writing to whichever room is easiest to write to. Usually the end user. Sometimes the industry. Rarely the payer.' }, { type: 'h3', text: 'What each room needs to hear' }, { type: 'p', text: 'A consumer needs to believe the product will work for her specifically, and that buying it is low risk. A subscriber needs a reason to stay that is visible every month, not only at signup. An enterprise buyer needs ROI evidence, integration detail, and proof you can operate at scale.' }, { type: 'p', text: "The person who signs a contract needs something different. ROI evidence. Integration data. Risk mitigation. Proof that your company can operate at scale. They need to see that you understand their organisation's concerns, not only the end user's experience." }, { type: 'quote', text: 'This is what Beige Noise creates. Safe, technically correct content that speaks to consumers and gets ignored by buyers.' }, { type: 'h3', text: 'Three questions to check which room you are speaking to' }, { type: 'p', text: 'Does your LinkedIn content mention procurement, commissioning, or enterprise integration? Does it address ROI for the organisation rather than outcomes for the individual? Does it reference the risks a health system director would need managed before signing?' }, { type: 'p', text: 'If the answer to all three is no, your content is talking to the wrong room. Revenue Architecture fixes this. It starts by identifying who the enterprise buyer is. Then it translates your evidence into their language.' }] },
@@ -1204,11 +1228,14 @@ class Component extends DCLogic {
     };
     window.addEventListener('hashchange', handleHash);
     handleHash();
+    this._tStart();
     window.addEventListener('scroll', () => {
       const bg = document.getElementById('parallax-bg');
       if (bg) bg.style.transform = 'translateY(' + (window.scrollY * 0.35) + 'px)';
     }, { passive: true });
   }
+
+  componentWillUnmount() { this._tStop(); }
 
   componentDidUpdate(prevState) {
     const ps = prevState && prevState.page !== undefined ? prevState : null;
@@ -1227,6 +1254,21 @@ class Component extends DCLogic {
     const { page, blogSlug, menuOpen, faqOpen, pFaqOpen, formSent, showGBP } = this.state;
     const nl = (p) => ({ fontFamily: "'DM Sans', sans-serif", fontSize: '15px', fontWeight: page === p ? 600 : 500, color: page === p ? '#13544e' : '#333', textDecoration: 'none', paddingBottom: '3px', borderBottom: page === p ? '2px solid #13544e' : '2px solid transparent' });
     const mkFaqs = (openState, key) => this.faqs.map((f, i) => ({ ...f, open: !!openState[i], toggle: () => this._tgl(key, i), answerStyle: { maxHeight: openState[i] ? '500px' : '0', overflow: 'hidden', transition: 'max-height 0.35s ease', paddingTop: openState[i] ? '12px' : '0', paddingBottom: openState[i] ? '24px' : '0' }, iconStyle: { display: 'inline-block', transform: openState[i] ? 'rotate(45deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease', fontSize: '24px', fontWeight: 300, lineHeight: '1', color: '#aaa', flexShrink: 0 } }));
+    const tsAll = this.testimonials;
+    const tn = tsAll.length;
+    const ti = (((this.state.tIdx || 0) % tn) + tn) % tn;
+    const tRaw = tsAll[ti];
+    const tCur = { ...tRaw, hasBody: tRaw.paras.length > 0, logoStyle: { height: tRaw.logoH + 'px', width: 'auto', maxWidth: '200px', objectFit: 'contain', objectPosition: 'left center', display: 'block' } };
+    const dotBase = { width: '9px', height: '9px', borderRadius: '50%', border: 'none', padding: 0, cursor: 'pointer', transition: 'all 0.25s ease' };
+    const tDots = tsAll.map((x, i) => ({
+      go: () => this._tGo(i),
+      dotLight: { ...dotBase, width: i === ti ? '26px' : '9px', background: i === ti ? '#13544e' : '#cfcfd8' },
+      dotDark: { ...dotBase, width: i === ti ? '26px' : '9px', background: i === ti ? '#5e9993' : 'rgba(255,255,255,0.28)' },
+    }));
+    const tNext = () => this._tGo(ti + 1 >= tn ? 0 : ti + 1);
+    const tPrev = () => this._tGo(ti - 1 < 0 ? tn - 1 : ti - 1);
+    const tPause = () => this._tStop();
+    const tResume = () => this._tStart();
     const pr = {};
     const currentPost = this.posts.find(p => p.slug === blogSlug) || null;
     const contentBlocks = currentPost ? currentPost.content.map(b => ({ ...b, isP: b.type === 'p', isH3: b.type === 'h3', isQuote: b.type === 'quote' })) : [];
@@ -1241,6 +1283,7 @@ class Component extends DCLogic {
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
       posts: this.posts, featuredPost: this.posts[0], otherPosts: this.posts.slice(1), currentPost, contentBlocks, relatedPosts,
       faqs: mkFaqs(faqOpen, 'faqOpen'), pFaqs: mkFaqs(pFaqOpen, 'pFaqOpen'),
+      tCur, tDots, tNext, tPrev, tPause, tResume,
 
       formSent, formNotSent: !formSent,
       submitForm: (e) => {
